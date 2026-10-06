@@ -3,6 +3,9 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
+	
+    <groupId>io.github.zmb96</groupId>
+    <version>3.5.9</version>
 
     <artifactId>ZeroEngine</artifactId>
     <packaging>jar</packaging>
@@ -72,6 +75,7 @@
             <groupId>io.papermc.paper</groupId>
             <artifactId>paper-api</artifactId>
             <version>26.3.build.157-beta</version>
+
             <scope>provided</scope>
         </dependency>
         <dependency>

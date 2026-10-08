@@ -69,7 +69,7 @@
 - 💰 **双后端经济**：自动检测 EssentialsX / Vault，无需手动配置
 - 🗄️ **持久化存储**：内置 SQLite / MySQL 切换，零配置开箱即用
 - 🔔 **完整事件系统**：120+ Bukkit 事件分类封装，链式调用
-- ⚡ **SF Tick 系统**：独立线程 100tick/秒，不干扰原版 20tick/秒
+- ⚡ **SF Tick 系统**：独立线程 100tick/秒，不干扰原版 20tick/秒；提供 `STick` 抽象基类，链式调用启动定时/延迟任务
 - 🌍 **世界管理**：时间/天气/难度/PVP/世界边界/生物生成/火焰蔓延/预设
 - 💬 **聊天系统**：多频道、禁言、脏话过滤、聊天格式化
 - 🔑 **权限系统**：权限组、继承、前缀后缀、个人权限
@@ -529,6 +529,105 @@ tick.runSyncLater(() -> {
 }, 100);
 ```
 
+### STick 基类（推荐写法）
+
+为避免手动管理 `taskId` 和回调函数，ZeroEngine 提供 `STick` 抽象基类。开发者继承 `STick`、重写 `onCode(long sfTick)`、调用 `timer()` / `later()` / `now()` 启动调度即可。
+
+```java
+import cn.ZeroEngine.Engine.api.v3.feature.tick.STick;
+
+public class CountdownTask extends STick {
+    private int left = 10;
+    @Override
+    public void onCode(long sfTick) {
+        SF.sf().broadcast("倒计时：" + left + " 秒");
+        if (--left <= 0) cancel();
+    }
+}
+
+// 启动：每秒（100 sfTicks）执行一次
+new CountdownTask().timer(100);
+```
+
+#### API 一览
+
+| 方法 | 说明 |
+|------|------|
+| `abstract void onCode(long sfTick)` | 开发者重写：在里面写要执行的代码 |
+| `timer(long periodTicks)` | 定时循环，立即开始，每 periodTicks 执行一次 |
+| `timer(long delayTicks, long periodTicks)` | 延迟后开始，每 periodTicks 执行一次 |
+| `later(long delayTicks)` | 延迟执行一次 |
+| `now()` | 立即执行一次 |
+| `sync()` | 切换为**主线程同步**执行（操作 Bukkit API 必须用） |
+| `async()` | 切换为异步执行（默认） |
+| `cancel()` | 取消任务 |
+| `isRunning()` | 是否运行中 |
+
+链式调用：
+
+```java
+// 同步定时：每秒整点报时
+new STick() {
+    @Override public void onCode(long sfTick) {
+        Bukkit.broadcastMessage("整点报时");
+    }
+}.sync().timer(0, 1000);
+
+// 异步延迟：5 秒后执行
+new STick() {
+    @Override public void onCode(long sfTick) {
+        SF.sf().info("5 秒已过");
+    }
+}.later(500);
+```
+
+### 什么 Bukkit API 必须同步调用（必须 `sync()`）
+
+**SF Tick 默认在独立线程运行，调用任何会"修改游戏状态"的 Bukkit API 都必须先 `.sync()`，否则会触发 `IllegalStateException: Asynchronous entity spawning!` 或线程不安全问题。**
+
+#### 必须同步（主线程）的 API
+
+| 类别 | 示例 API |
+|------|---------|
+| **方块修改** | `Block.setType()`、`World.setType()`、`Block.getState()`（写入） |
+| **实体生成/移除** | `World.spawnEntity()`、`World.dropItem()`、`Entity.remove()`、`World.spawn()` 系列 |
+| **实体修改** | `Entity.setVelocity()`、`Entity.teleport()`、`Zombie.setTarget()`、`Mob.setHealth()` |
+| **玩家状态修改** | `Player.teleport()`、`Player.setHealth()`、`Player.setFoodLevel()`、`Player.setGameMode()`、`Player.setExp()` |
+| **玩家消息/界面** | `Player.sendMessage()`、`Player.openInventory()`、`Player.closeInventory()`、`Player.sendTitle()` |
+| **物品栏操作** | `Player.getInventory().addItem()`、`Inventory.setItem()`、`InventoryHolder.getInventory()`（写入） |
+| **粒子/音效** | `World.spawnParticle()`、`World.playSound()`、`Player.playSound()` |
+| **事件触发** | `Bukkit.getPluginManager().callEvent()`（推荐主线程） |
+| **Boss 条/BossBar** | `BossBar.addPlayer()`、`BossBar.removePlayer()` |
+| **聊天广播** | `Bukkit.broadcastMessage()`（String 形式，Paper 26.3 推荐主线程） |
+| **调度新任务** | `new BukkitRunnable().runTask()`、`Bukkit.getScheduler().runTask()` |
+| **世界加载/卸载** | `Bukkit.createWorld()`、`Bukkit.unloadWorld()` |
+| **白名单/封禁** | `Bukkit.setWhitelist()`、`Bukkit.banIP()` |
+
+#### 可异步调用的 API（不需要 `sync()`）
+
+| 类别 | 示例 API |
+|------|---------|
+| **只读查询** | `Player.getName()`、`Player.getUniqueId()`、`World.getName()`、`World.getEnvironment()` |
+| **在线玩家列表** | `Bukkit.getOnlinePlayers()`（返回的是快照视图，读安全） |
+| **位置读取** | `Entity.getLocation()`、`Player.getLocation()`、`Block.getLocation()` |
+| **方块只读状态** | `Block.getType()`、`Block.getBiome()` |
+| **PDC 读取** | `pdc.get()`（PersistentDataContainer 读取线程安全） |
+| **数学/字符串处理** | 纯计算、`String.format()`、`UUID.randomUUID()` |
+| **数据库** | JDBC 查询（必须异步，否则会卡主线程） |
+| **HTTP 请求** | 必须异步 |
+| **文件读写** | 推荐异步 |
+| **Vault 经济查询** | `economy.getBalance(player)`（EssentialsX 实现可异步） |
+| **日志** | `SF.sf().info()`、`Logger.info()` |
+
+#### 经验法则
+
+> **"修改"必同步，"只读"可异步。**
+
+如果不确定，**默认 `sync()`**，安全优先。异步只用于：
+1. 数据库 / 文件 / 网络 I/O
+2. 纯数学计算
+3. 仅读取字段且不依赖游戏状态
+
 ### 常量
 
 ```java
@@ -538,8 +637,9 @@ TickManager.TICK_INTERVAL_MS  // 10
 
 ### 注意事项
 
-- SF Tick 系统在**独立线程**运行，不要在 tick 回调中直接调用 Bukkit API
-- 需要操作 Bukkit API 时使用 `runSync()` / `runSyncLater()` 切回主线程
+- SF Tick 系统在**独立线程**运行，**不要在 tick 回调中直接调用修改游戏状态的 Bukkit API**
+- 需要操作 Bukkit API 时使用 `runSync()` / `runSyncLater()` 切回主线程，或在 `STick` 子类里调用 `.sync()` 后再 `timer()` / `later()` / `now()`
+- 推荐用 `STick` 抽象基类写定时任务，避免手动管理 `taskId`
 - 所有新 API 的定时功能（如禁言倒计时）都基于此系统
 - 插件卸载时自动关闭 tick 线程
 

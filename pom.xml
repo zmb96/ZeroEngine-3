@@ -5,9 +5,8 @@
     <modelVersion>4.0.0</modelVersion>
 	
     <groupId>io.github.zmb96</groupId>
-    <version>3.5.9</version>
-
     <artifactId>ZeroEngine</artifactId>
+    <version>3.5.10</version>
     <packaging>jar</packaging>
 
     <name>ZeroEngine</name>

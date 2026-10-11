@@ -1,24 +1,32 @@
 package cn.ZeroEngine.Engine.api.v2.economy;
 
-import net.milkbowl.vault.economy.EconomyResponse;
 import org.bukkit.Bukkit;
 import org.bukkit.OfflinePlayer;
 import org.bukkit.plugin.RegisteredServiceProvider;
 import org.bukkit.plugin.java.JavaPlugin;
 
+/**
+ * Vault 经济后端（v2）。
+ * 使用反射加载 Vault API，避免硬依赖。
+ */
 public final class VaultBackend implements EconomyBackend {
 
-    private net.milkbowl.vault.economy.Economy vault;
+    private Object vault; // net.milkbowl.vault.economy.Economy
+    private Class<?> vaultClass;
+    private Class<?> economyResponseClass;
 
     public VaultBackend(JavaPlugin plugin) {
         try {
             if (plugin.getServer().getPluginManager().getPlugin("Vault") == null) {
                 return;
             }
-            RegisteredServiceProvider<net.milkbowl.vault.economy.Economy> rsp =
-                    plugin.getServer().getServicesManager().getRegistration(net.milkbowl.vault.economy.Economy.class);
+            Class<?> ecoCls = Class.forName("net.milkbowl.vault.economy.Economy");
+            Class<?> rspCls = Class.forName("org.bukkit.plugin.RegisteredServiceProvider");
+            Object rsp = plugin.getServer().getServicesManager().getRegistration(ecoCls);
             if (rsp != null) {
-                vault = rsp.getProvider();
+                this.vault = rspCls.getMethod("getProvider").invoke(rsp);
+                this.vaultClass = ecoCls;
+                this.economyResponseClass = Class.forName("net.milkbowl.vault.economy.EconomyResponse");
             }
         } catch (Throwable ignored) {
         }
@@ -33,7 +41,7 @@ public final class VaultBackend implements EconomyBackend {
     public boolean hasAccount(OfflinePlayer p) {
         if (vault == null) return false;
         try {
-            return vault.hasAccount(p);
+            return (boolean) vaultClass.getMethod("hasAccount", OfflinePlayer.class).invoke(vault, p);
         } catch (Throwable ignored) {
         }
         return false;
@@ -43,7 +51,8 @@ public final class VaultBackend implements EconomyBackend {
     public double balance(OfflinePlayer p) {
         if (vault == null) return 0;
         try {
-            return vault.getBalance(p);
+            Object r = vaultClass.getMethod("getBalance", OfflinePlayer.class).invoke(vault, p);
+            if (r instanceof Number) return ((Number) r).doubleValue();
         } catch (Throwable ignored) {
         }
         return 0;
@@ -53,8 +62,8 @@ public final class VaultBackend implements EconomyBackend {
     public boolean give(OfflinePlayer p, double amount) {
         if (vault == null) return false;
         try {
-            EconomyResponse r = vault.depositPlayer(p, amount);
-            return r.transactionSuccess();
+            Object r = vaultClass.getMethod("depositPlayer", OfflinePlayer.class, double.class).invoke(vault, p, amount);
+            return responseSuccess(r);
         } catch (Throwable ignored) {
         }
         return false;
@@ -64,8 +73,8 @@ public final class VaultBackend implements EconomyBackend {
     public boolean take(OfflinePlayer p, double amount) {
         if (vault == null) return false;
         try {
-            EconomyResponse r = vault.withdrawPlayer(p, amount);
-            return r.transactionSuccess();
+            Object r = vaultClass.getMethod("withdrawPlayer", OfflinePlayer.class, double.class).invoke(vault, p, amount);
+            return responseSuccess(r);
         } catch (Throwable ignored) {
         }
         return false;
@@ -75,13 +84,24 @@ public final class VaultBackend implements EconomyBackend {
     public boolean set(OfflinePlayer p, double amount) {
         if (vault == null) return false;
         try {
-            double cur = vault.getBalance(p);
+            double cur = balance(p);
             if (cur > amount) {
-                return vault.withdrawPlayer(p, cur - amount).transactionSuccess();
+                Object r = vaultClass.getMethod("withdrawPlayer", OfflinePlayer.class, double.class).invoke(vault, p, cur - amount);
+                return responseSuccess(r);
             } else if (cur < amount) {
-                return vault.depositPlayer(p, amount - cur).transactionSuccess();
+                Object r = vaultClass.getMethod("depositPlayer", OfflinePlayer.class, double.class).invoke(vault, p, amount - cur);
+                return responseSuccess(r);
             }
             return true;
+        } catch (Throwable ignored) {
+        }
+        return false;
+    }
+
+    private boolean responseSuccess(Object r) {
+        if (r == null || economyResponseClass == null) return false;
+        try {
+            return (boolean) economyResponseClass.getMethod("transactionSuccess").invoke(r);
         } catch (Throwable ignored) {
         }
         return false;
@@ -91,7 +111,8 @@ public final class VaultBackend implements EconomyBackend {
     public String format(double amount) {
         if (vault == null) return String.format("%.2f", amount);
         try {
-            return vault.format(amount);
+            Object r = vaultClass.getMethod("format", double.class).invoke(vault, amount);
+            return r == null ? String.format("%.2f", amount) : r.toString();
         } catch (Throwable ignored) {
         }
         return String.format("%.2f", amount);

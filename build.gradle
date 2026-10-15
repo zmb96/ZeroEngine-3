@@ -1,0 +1,74 @@
+plugins {
+    id 'java'
+    id 'com.gradleup.shadow' version '9.0.0-beta16'
+}
+
+group = 'io.github.zmb96'
+version = '3.5.12'
+description = 'ZeroEngine'
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(25)
+    }
+}
+
+repositories {
+    mavenCentral()
+
+    maven {
+        name = 'papermc'
+        url = 'https://repo.papermc.io/repository/maven-public/'
+    }
+    maven {
+        name = 'essentialsx'
+        url = 'https://repo.essentialsx.net/releases/'
+    }
+    maven {
+        name = 'jitpack'
+        url = 'https://jitpack.io'
+    }
+    maven {
+        name = 'nexus'
+        url = 'https://nexus.hc.to/content/repositories/pub_releases/'
+    }
+}
+
+dependencies {
+    compileOnly 'io.papermc.paper:paper-api:26.3.build.157-beta'
+
+    compileOnly 'net.milkbowl.vault:VaultAPI:1.7'
+
+    implementation 'com.google.code.gson:gson:2.10.1'
+
+    compileOnly('net.essentialsx:EssentialsX:2.20.1') {
+        exclude group: 'org.spigotmc', module: 'spigot-api'
+    }
+}
+
+tasks.withType(JavaCompile).configureEach {
+    options.encoding = 'UTF-8'
+}
+
+processResources {
+    filteringCharset = 'UTF-8'
+    filesMatching(['**/*.yml', '**/*.properties', '**/*.xml', '**/*.txt']) {
+        expand(
+                version: project.version,
+        )
+    }
+}
+
+shadowJar {
+    archiveClassifier.set('')
+    relocate 'com.google.gson', 'cn.ZeroEngine.EngineLibraries'
+}
+
+jar {
+    enabled = false
+    dependsOn shadowJar
+}
+
+tasks.named('build') {
+    dependsOn shadowJar
+}

@@ -43,6 +43,10 @@ public interface SFApi {
 
     SFScheduler scheduler();
 
+    String getVersion();
+
+    String getZeroEngineJson();
+
     SFPlayerOps players();
 
     SFServerOps server();

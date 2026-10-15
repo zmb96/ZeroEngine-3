@@ -1,5 +1,7 @@
 package cn.ZeroEngine.Engine.api.v3;
 
+import cn.ZeroEngine.Engine.api.v1.main;
+import cn.ZeroEngine.EngineLibraries.json;
 import org.bukkit.Location;
 import org.bukkit.OfflinePlayer;
 import org.bukkit.Server;
@@ -47,11 +49,9 @@ import cn.ZeroEngine.Engine.api.v3.feature.block.BlockManager;
 import cn.ZeroEngine.Engine.api.v3.feature.block.BlockListener;
 import cn.ZeroEngine.Engine.api.v3.feature.block.SFBlockCommand;
 import cn.ZeroEngine.Engine.api.v3.feature.screen.ScreenManager;
-import cn.ZeroEngine.Engine.api.v3.feature.screen.SScreen;
 import cn.ZeroEngine.Engine.api.v3.feature.crop.CropManager;
 import cn.ZeroEngine.Engine.api.v3.feature.crop.CropListener;
 import cn.ZeroEngine.Engine.api.v3.feature.crop.SFCropCommand;
-import cn.ZeroEngine.Engine.api.v3.feature.crop.SCrop;
 import cn.ZeroEngine.Engine.api.v3.feature.teleport.TeleportManager;
 import cn.ZeroEngine.Engine.api.v3.feature.tick.TickManager;
 import cn.ZeroEngine.Engine.api.v3.feature.chat.ChatManager;
@@ -80,6 +80,7 @@ public final class SF implements SFApi {
     private final SFCommandOps commands;
     private final SFServerOps serverOps;
     private final TickManager tickManager;
+    private final String verison;
     private TeleportManager teleportManager;
     private EnchantManager enchantManager;
     private EnchantAttributeListener enchantAttrListener;
@@ -127,7 +128,18 @@ public final class SF implements SFApi {
         this.serverOps = new SFServerOps();
         this.tickManager = new TickManager(plugin);
         this.tickManager.start();
+        this.verison = main.ZeroEngine_VERSION;
         DatabaseManager.init(plugin);
+    }
+
+    public String getVersion() {
+        return this.verison;
+    }
+
+    public String getZeroEngineJson() {
+        json lang = new json(this.plugin(), "lang.json").load();
+        plugin.getLogger().info(lang.getString("warn.SF.JsonWarn"));
+        return main.ZeroEngine_GunMu;
     }
 
     public static void init(JavaPlugin plugin) {

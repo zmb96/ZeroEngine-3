@@ -1,5 +1,6 @@
 package cn.ZeroEngine.Engine.api.v1;
 
+import cn.ZeroEngine.EngineLibraries.json;
 import net.milkbowl.vault.economy.Economy;
 import org.bukkit.plugin.RegisteredServiceProvider;
 import org.bukkit.plugin.java.JavaPlugin;
@@ -18,21 +19,30 @@ import cn.ZeroEngine.Engine.api.v2.feature.world.WorldCommand;
 import cn.ZeroEngine.Engine.api.v2.feature.world.WorldManager;
 import cn.ZeroEngine.Engine.api.v2.feature.teleport.TeleportManager;
 
+import java.io.File;
+
 @Deprecated
 public final class main extends JavaPlugin {
 
     private static Economy eco;
     private TeleportManager teleportManager;
 
+    public static final String ZeroEngine_VERSION = "3.5.12";
+    public static final String ZeroEngine_GunMu = null;
+
+    @Deprecated
     @Override
     public void onEnable() {
         SF.init(this);
         SF sf = SF.sf();
-        sf.info("Starting cn.ZeroEngine.Engine.api.v1 (v3 bridge enabled)");
+
+        json lang = new json(this, "lang.json").load();
+
+        sf.info(lang.getStringPath("info.main-onEnable.line38"));
         saveDefaultConfig();
 
         boolean dbOk = DatabaseManager.init(this);
-        sf.info("Database ready: " + dbOk);
+        sf.info(lang.getStringPath("info.main-onEnable.line42") + dbOk);
 
         teleportManager = new TeleportManager(this);
         sf.setTeleportManager(teleportManager);
@@ -77,23 +87,26 @@ public final class main extends JavaPlugin {
         v3sf.enchant();
         v3sf.item();
 
-        sf.info("插件已加载");
-        sf.info("Economy ready: " + sf.eco().ready() + " (Essentials=" + sf.eco().hasEssentials() + ", Vault=" + sf.eco().hasVault() + ")");
+        sf.info(lang.getStringPath("info.main-onEnable.line87"));
+        sf.info(lang.getStringPath("info.main-onEnable.line88-1") + sf.eco().ready() + lang.getStringPath("info.main-onEnable.line88-2") + sf.eco().hasEssentials() + lang.getStringPath("info.main-onEnable.line88-3") + sf.eco().hasVault() + lang.getStringPath("info.main-onEnable.line88-4"));
     }
 
+    @Deprecated
     @Override
     public void onDisable() {
         SF sf = null;
+        json lang = new json(this, "lang.json").load();
         try { sf = SF.sf(); } catch (IllegalStateException ignored) {}
         if (sf == null) {
-            getLogger().warning("SF not initialized, skip clean shutdown (onEnable failed earlier)");
+            getLogger().warning(lang.getStringPath("info.main-onDisable.line98"));
             return;
         }
-        sf.info("Unload cn.ZeroEngine.Engine.api.v1.main");
+        sf.info(lang.getStringPath("info.main-onDisable.line101"));
         DatabaseManager.shutdown();
         SF.shutdown();
     }
 
+    @Deprecated
     private boolean setupEconomy() {
         try {
             if (getServer().getPluginManager().getPlugin("Vault") == null) {
@@ -112,10 +125,12 @@ public final class main extends JavaPlugin {
         return eco != null;
     }
 
+    @Deprecated
     public static Economy eco() {
         return eco;
     }
 
+    @Deprecated
     public static SF sf() {
         return SF.sf();
     }

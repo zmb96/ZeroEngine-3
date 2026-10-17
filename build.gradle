@@ -1,5 +1,6 @@
 plugins {
     id 'java'
+    id 'maven-publish'
     id 'com.gradleup.shadow' version '9.0.0-beta16'
 }
 
@@ -71,4 +72,14 @@ jar {
 
 tasks.named('build') {
     dependsOn shadowJar
+}
+
+publishing {
+    publications {
+        ZeroEngine(MavenPublication) {
+            // 发布 shadowJar fat-jar，覆盖 maven-publish 默认的 jar 产物
+            artifact shadowJar
+            from components.java
+        }
+    }
 }

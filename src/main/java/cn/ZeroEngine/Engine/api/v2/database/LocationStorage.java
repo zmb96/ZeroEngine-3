@@ -1,146 +1,104 @@
 package cn.ZeroEngine.Engine.api.v2.database;
 
-import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.UUID;
 
+/**
+ * v2 LocationStorage — 与 v3 语义一致，表级 CRUD 基于 Database 默认方法。
+ */
 public final class LocationStorage {
 
     private LocationStorage() {
     }
 
     public static boolean setHome(UUID uuid, String name, LocationData loc) {
-        Database db = DatabaseManager.db();
-        db.executeUpdate("DELETE FROM homes WHERE uuid=? AND name=?", uuid.toString(), name);
-        return db.executeUpdate(
-                "INSERT INTO homes (uuid, name, world, x, y, z, yaw, pitch) VALUES (?,?,?,?,?,?,?,?)",
-                uuid.toString(), name, loc.world, loc.x, loc.y, loc.z, loc.yaw, loc.pitch
-        ) > 0;
+        Map<String, Object> cols = homeCols(uuid, name, loc);
+        Map<String, Object> where = Map.of("uuid", uuid.toString(), "name", name);
+        return DatabaseManager.db().set("homes", cols, where) > 0;
     }
 
     public static boolean delHome(UUID uuid, String name) {
-        return DatabaseManager.db().executeUpdate(
-                "DELETE FROM homes WHERE uuid=? AND name=?", uuid.toString(), name
-        ) > 0;
+        return DatabaseManager.db().delete("homes",
+                Map.of("uuid", uuid.toString(), "name", name)) > 0;
     }
 
     public static LocationData getHome(UUID uuid, String name) {
-        return DatabaseManager.db().executeQuery(
-                "SELECT * FROM homes WHERE uuid=? AND name=?",
-                rs -> {
-                    try {
-                        return rs.next() ? readLoc(rs) : null;
-                    } catch (Exception e) {
-                        cn.ZeroEngine.EngineLibraries.ZeroServer.Engine.v2.ZeroSF sf = cn.ZeroEngine.EngineLibraries.ZeroServer.Engine.v2.ZeroSF.sf();
-                        sf.error("getHome read failed", e);
-                        return null;
-                    }
-                },
-                uuid.toString(), name
-        );
+        Database.DataRow row = DatabaseManager.db().first("homes",
+                Map.of("uuid", uuid.toString(), "name", name));
+        return row == null ? null : readLoc(row);
     }
 
     public static Map<String, LocationData> getHomes(UUID uuid) {
-        return DatabaseManager.db().executeQuery(
-                "SELECT * FROM homes WHERE uuid=?",
-                rs -> {
-                    Map<String, LocationData> map = new HashMap<>();
-                    try {
-                        while (rs.next()) {
-                            map.put(rs.getString("name"), readLoc(rs));
-                        }
-                    } catch (Exception e) {
-                        cn.ZeroEngine.EngineLibraries.ZeroServer.Engine.v2.ZeroSF sf = cn.ZeroEngine.EngineLibraries.ZeroServer.Engine.v2.ZeroSF.sf();
-                        sf.error("getHomes read failed", e);
-                    }
-                    return map;
-                },
-                uuid.toString()
-        );
+        List<Database.DataRow> rows = DatabaseManager.db().get("homes",
+                Map.of("uuid", uuid.toString()));
+        Map<String, LocationData> out = new HashMap<>();
+        for (Database.DataRow r : rows) out.put(r.getString("name"), readLoc(r));
+        return out;
     }
 
     public static boolean setWarp(String name, LocationData loc, UUID createdBy) {
-        Database db = DatabaseManager.db();
-        db.executeUpdate("DELETE FROM warps WHERE name=?", name);
-        return db.executeUpdate(
-                "INSERT INTO warps (name, world, x, y, z, yaw, pitch, created_by, created_at) VALUES (?,?,?,?,?,?,?,?,?)",
-                name, loc.world, loc.x, loc.y, loc.z, loc.yaw, loc.pitch,
-                createdBy == null ? null : createdBy.toString(),
-                System.currentTimeMillis()
-        ) > 0;
+        Map<String, Object> cols = new LinkedHashMap<>();
+        cols.put("name", name);
+        cols.put("world", loc.world);
+        cols.put("x", loc.x);
+        cols.put("y", loc.y);
+        cols.put("z", loc.z);
+        cols.put("yaw", loc.yaw);
+        cols.put("pitch", loc.pitch);
+        cols.put("created_by", createdBy == null ? null : createdBy.toString());
+        cols.put("created_at", System.currentTimeMillis());
+        return DatabaseManager.db().set("warps", cols, Map.of("name", name)) > 0;
     }
 
     public static boolean delWarp(String name) {
-        return DatabaseManager.db().executeUpdate("DELETE FROM warps WHERE name=?", name) > 0;
+        return DatabaseManager.db().delete("warps", Map.of("name", name)) > 0;
     }
 
     public static LocationData getWarp(String name) {
-        return DatabaseManager.db().executeQuery(
-                "SELECT * FROM warps WHERE name=?",
-                rs -> {
-                    try {
-                        return rs.next() ? readLoc(rs) : null;
-                    } catch (Exception e) {
-                        cn.ZeroEngine.EngineLibraries.ZeroServer.Engine.v2.ZeroSF sf = cn.ZeroEngine.EngineLibraries.ZeroServer.Engine.v2.ZeroSF.sf();
-                        sf.error("getWarp read failed", e);
-                        return null;
-                    }
-                },
-                name
-        );
+        Database.DataRow row = DatabaseManager.db().first("warps", Map.of("name", name));
+        return row == null ? null : readLoc(row);
     }
 
     public static Map<String, LocationData> getWarps() {
-        return DatabaseManager.db().executeQuery(
-                "SELECT * FROM warps",
-                rs -> {
-                    Map<String, LocationData> map = new HashMap<>();
-                    try {
-                        while (rs.next()) {
-                            map.put(rs.getString("name"), readLoc(rs));
-                        }
-                    } catch (Exception e) {
-                        cn.ZeroEngine.EngineLibraries.ZeroServer.Engine.v2.ZeroSF sf = cn.ZeroEngine.EngineLibraries.ZeroServer.Engine.v2.ZeroSF.sf();
-                        sf.error("getWarps read failed", e);
-                    }
-                    return map;
-                }
-        );
+        List<Database.DataRow> rows = DatabaseManager.db().all("warps");
+        Map<String, LocationData> out = new HashMap<>();
+        for (Database.DataRow r : rows) out.put(r.getString("name"), readLoc(r));
+        return out;
     }
 
     public static boolean setLastLocation(UUID uuid, LocationData loc) {
-        Database db = DatabaseManager.db();
-        db.executeUpdate("DELETE FROM last_locations WHERE uuid=?", uuid.toString());
-        return db.executeUpdate(
-                "INSERT INTO last_locations (uuid, world, x, y, z, yaw, pitch) VALUES (?,?,?,?,?,?,?)",
-                uuid.toString(), loc.world, loc.x, loc.y, loc.z, loc.yaw, loc.pitch
-        ) > 0;
+        Map<String, Object> cols = homeCols(uuid, null, loc);
+        cols.remove("name");
+        return DatabaseManager.db().set("last_locations", cols, Map.of("uuid", uuid.toString())) > 0;
     }
 
     public static LocationData getLastLocation(UUID uuid) {
-        return DatabaseManager.db().executeQuery(
-                "SELECT * FROM last_locations WHERE uuid=?",
-                rs -> {
-                    try {
-                        return rs.next() ? readLoc(rs) : null;
-                    } catch (Exception e) {
-                        cn.ZeroEngine.EngineLibraries.ZeroServer.Engine.v2.ZeroSF sf = cn.ZeroEngine.EngineLibraries.ZeroServer.Engine.v2.ZeroSF.sf();
-                        sf.error("getLastLocation read failed", e);
-                        return null;
-                    }
-                },
-                uuid.toString()
-        );
+        Database.DataRow row = DatabaseManager.db().first("last_locations", Map.of("uuid", uuid.toString()));
+        return row == null ? null : readLoc(row);
     }
 
-    private static LocationData readLoc(ResultSet rs) throws Exception {
+    private static Map<String, Object> homeCols(UUID uuid, String name, LocationData loc) {
+        Map<String, Object> m = new LinkedHashMap<>();
+        m.put("uuid", uuid.toString());
+        if (name != null) m.put("name", name);
+        m.put("world", loc.world);
+        m.put("x", loc.x);
+        m.put("y", loc.y);
+        m.put("z", loc.z);
+        m.put("yaw", loc.yaw);
+        m.put("pitch", loc.pitch);
+        return m;
+    }
+
+    private static LocationData readLoc(Database.DataRow row) {
         return new LocationData(
-                rs.getString("world"),
-                rs.getDouble("x"), rs.getDouble("y"), rs.getDouble("z"),
-                rs.getFloat("yaw"), rs.getFloat("pitch")
+                row.getString("world"),
+                row.getDouble("x"), row.getDouble("y"), row.getDouble("z"),
+                row.getFloat("yaw"), row.getFloat("pitch")
         );
     }
 

@@ -4,7 +4,7 @@ plugins {
 }
 
 group = 'io.github.zmb96'
-version = '3.5.12'
+version = '3.6.0'
 description = 'ZeroEngine'
 
 java {

@@ -3,7 +3,7 @@ package cn.ZeroEngine.Engine.api.v3.feature.achievement;
 import org.bukkit.Material;
 import org.bukkit.entity.Player;
 import org.bukkit.plugin.Plugin;
-import cn.ZeroEngine.Engine.api.v3.SF;
+import cn.ZeroEngine.EngineLibraries.ZeroServer.Engine.v3.ZeroSF;
 
 public abstract class SAchievement {
 
@@ -57,15 +57,15 @@ public abstract class SAchievement {
     }
 
     public void giveMoney(Player p, double amount) {
-        SF.sf().giveMoney(p, amount);
+        ZeroSF.sf().giveMoney(p, amount);
     }
 
     public void giveItem(Player p, String itemId, int amount) {
-        SF.sf().item().give(p, itemId, amount);
+        ZeroSF.sf().item().give(p, itemId, amount);
     }
 
     public void runCommand(String cmd) {
-        SF.sf().console(cmd);
+        ZeroSF.sf().console(cmd);
     }
 
     public String fullId() {

@@ -1,0 +1,43 @@
+﻿
+> Task :compileJava
+.\gradlew.bat : D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\Engine\api\v3\feature\tick\STick.java:4: 错误: 需要 class
+、interface、enum 或 record
+At line:15 char:2512
++ ... ; cd "D:\素材\mods\ZeroEngine" ; .\gradlew.bat compileJava 2>&1 | Out-F ...
++                                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (D:\素材\mods\Zero...e、enum 或 record:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+package cn.ZeroEngine.Engine.api.v3.feature.tick;import cn.ZeroEngine.EngineLibraries.ZeroServer.Engine.v3.ZeroSF;
+^
+D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\Engine\api\v3\feature\tick\STick.java:4: 错误: 需要 class、interface、enum 
+或 record
+package cn.ZeroEngine.Engine.api.v3.feature.tick;import cn.ZeroEngine.EngineLibraries.ZeroServer.Engine.v3.ZeroSF;
+                                                 ^
+2 个错误
+
+> Task :compileJava FAILED
+
+[Incubating] Problems report is available at: file:///D:/%E7%B4%A0%E6%9D%90/mods/ZeroEngine/build/reports/problems/problems-report.html
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':compileJava' (registered by plugin class 'org.gradle.api.plugins.JavaBasePlugin').
+> Compilation failed; see the compiler output below.
+  D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\Engine\api\v3\feature\tick\STick.java:4: 错误: 需要 class、interface、enu
+m 或 record
+  package cn.ZeroEngine.Engine.api.v3.feature.tick;import cn.ZeroEngine.EngineLibraries.ZeroServer.Engine.v3.ZeroSF;
+  ^
+  D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\Engine\api\v3\feature\tick\STick.java:4: 错误: 需要 class、interface、enu
+m 或 record
+  package cn.ZeroEngine.Engine.api.v3.feature.tick;import cn.ZeroEngine.EngineLibraries.ZeroServer.Engine.v3.ZeroSF;
+                                                   ^
+  2 个错误
+
+* Try:
+> Check your code and dependencies to fix the compilation error(s)
+> Run with --scan to get full insights from a Build Scan (powered by Develocity).
+
+BUILD FAILED in 4s
+1 actionable task: 1 executed

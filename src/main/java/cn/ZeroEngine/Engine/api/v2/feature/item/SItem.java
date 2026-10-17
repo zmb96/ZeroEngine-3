@@ -11,7 +11,7 @@ import org.bukkit.inventory.meta.ItemMeta;
 import org.bukkit.persistence.PersistentDataContainer;
 import org.bukkit.persistence.PersistentDataType;
 import org.bukkit.plugin.Plugin;
-import cn.ZeroEngine.Engine.api.v2.SF;
+import cn.ZeroEngine.EngineLibraries.ZeroServer.Engine.v2.ZeroSF;
 import cn.ZeroEngine.Engine.api.v2.feature.enchant.SFAttr;
 
 import java.util.*;
@@ -29,7 +29,7 @@ public abstract class SItem {
         SFAttr.ensureLoaded();
         org.bukkit.attribute.Attribute a = SFAttr.get(name);
         if (plugin != null) {
-            SF sf = SF.sf();
+            ZeroSF sf = ZeroSF.sf();
             if (a != null) {
                 sf.info("[Item] Attribute lookup: '" + name + "' -> matched '" + a.name() + "'");
             } else {

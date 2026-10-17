@@ -3,6 +3,7 @@ package cn.ZeroEngine.Engine.api.v2.main;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import java.util.logging.Level;
+import cn.ZeroEngine.Engine.api.v2.main.SFLogger;
 
 public final class SFLogger {
 

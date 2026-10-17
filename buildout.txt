@@ -1,0 +1,1769 @@
+﻿
+> Task :compileJava
+.\gradlew.bat : D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v3\feature\item\Zer
+oType.java:6: 错误: 类 DropSource 是公共的, 应在名为 DropSource.java 的文件中声明
+At line:15 char:2661
++ ... ; cd "D:\素材\mods\ZeroEngine" ; .\gradlew.bat compileJava 2>&1 | Out-F ...
++                                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (D:\素材\mods\Zero...rce.java 的文件中声明:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+public final class DropSource {
+             ^
+D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\Engine\api\v2\feature\chat\ChatHandler.java:19: 错误: 程序包ZeroChatManage
+r不存在
+        ZeroChatManager.ChatChannel channel();
+                       ^
+D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\Engine\api\v2\feature\chat\ChatHandler.java:20: 错误: 程序包ZeroChatManage
+r不存在
+        void channel(ZeroChatManager.ChatChannel channel);
+                                    ^
+D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v2\feature\chat\ZeroChatManager.jav
+a:18: 错误: 找不到符号
+    private final List<ChatHandler> handlers = new CopyOnWriteArrayList<>();
+                       ^
+  符号:   类 ChatHandler
+  位置: 类 ZeroChatManager
+D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v2\feature\chat\ZeroChatManager.jav
+a:206: 错误: 找不到符号
+    public void registerHandler(ChatHandler handler) {
+                                ^
+  符号:   类 ChatHandler
+  位置: 类 ZeroChatManager
+D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v2\feature\chat\ZeroChatManager.jav
+a:211: 错误: 找不到符号
+    public void unregisterHandler(ChatHandler handler) {
+                                  ^
+  符号:   类 ChatHandler
+  位置: 类 ZeroChatManager
+D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v2\feature\chat\ZeroChatManager.jav
+a:215: 错误: 找不到符号
+    public List<ChatHandler> getHandlers() {
+                ^
+  符号:   类 ChatHandler
+  位置: 类 ZeroChatManager
+D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v2\feature\chat\ZeroChatManager.jav
+a:231: 错误: 程序包ChatHandler不存在
+    static final class ChatContextImpl implements ChatHandler.ChatContext {
+                                                             ^
+D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v2\feature\tick\ZeroTickManager.jav
+a:79: 错误: 找不到符号
+    private void safeRun(TickTask task, long tick) {
+                         ^
+  符号:   类 TickTask
+  位置: 类 ZeroTickManager
+D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v2\feature\tick\ZeroTickManager.jav
+a:112: 错误: 找不到符号
+    public long runLater(TickTask task, long delayTicks) {
+                         ^
+  符号:   类 TickTask
+  位置: 类 ZeroTickManager
+D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v2\feature\tick\ZeroTickManager.jav
+a:118: 错误: 找不到符号
+    public long runTimer(TickTask task, long delayTicks, long periodTicks) {
+                         ^
+  符号:   类 TickTask
+  位置: 类 ZeroTickManager
+D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v2\feature\tick\ZeroTickManager.jav
+a:124: 错误: 找不到符号
+    public long runTimer(TickTask task, long periodTicks) {
+                         ^
+  符号:   类 TickTask
+  位置: 类 ZeroTickManager
+D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v2\feature\tick\ZeroTickManager.jav
+a:25: 错误: 找不到符号
+        final TickTask task;
+              ^
+  符号:   类 TickTask
+  位置: 类 TickEntry
+D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v2\feature\tick\ZeroTickManager.jav
+a:30: 错误: 找不到符号
+        TickEntry(long id, TickTask task, long startTick, long period, boolean repeat) {
+                           ^
+  符号:   类 TickTask
+  位置: 类 TickEntry
+D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\Engine\api\v3\feature\item\SItem.java:69: 错误: 找不到符号
+    public List<DropSource> dropSources() { return Collections.emptyList(); }
+                ^
+  符号:   类 DropSource
+  位置: 类 SItem
+D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\Engine\api\v3\feature\chat\ChatHandler.java:19: 错误: 程序包ZeroChatManage
+r不存在
+        ZeroChatManager.ChatChannel channel();
+                       ^
+D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\Engine\api\v3\feature\chat\ChatHandler.java:20: 错误: 程序包ZeroChatManage
+r不存在
+        void channel(ZeroChatManager.ChatChannel channel);
+                                    ^
+D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\Engine\api\v3\feature\recipe\AdvancedCraftTable.java:19: 错误: 找不到符号
+    public SChestGUI craftGUI(ZeroRecipeManager manager) { return null; }
+                              ^
+  符号:   类 ZeroRecipeManager
+  位置: 类 AdvancedCraftTable
+D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v3\feature\item\ZeroItemManager.jav
+a:9: 错误: 找不到符号
+    private final Map<String, SItem> items = new HashMap<>();
+                              ^
+  符号:   类 SItem
+  位置: 类 ZeroItemManager
+D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v3\feature\item\ZeroItemManager.jav
+a:11: 错误: 找不到符号
+    public ZeroItemManager register(SItem item) {
+                                    ^
+  符号:   类 SItem
+  位置: 类 ZeroItemManager
+D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v3\feature\item\ZeroItemManager.jav
+a:22: 错误: 找不到符号
+    public boolean registerIfAbsent(SItem item) {
+                                    ^
+  符号:   类 SItem
+  位置: 类 ZeroItemManager
+D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v3\feature\item\ZeroItemManager.jav
+a:32: 错误: 找不到符号
+    public ZeroItemManager registerAll(SItem... items) {
+                                       ^
+  符号:   类 SItem
+  位置: 类 ZeroItemManager
+D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v3\feature\item\ZeroItemManager.jav
+a:41: 错误: 找不到符号
+    public SItem get(String id) { return items.get(id); }
+           ^
+  符号:   类 SItem
+  位置: 类 ZeroItemManager
+D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v3\feature\item\ZeroItemManager.jav
+a:43: 错误: 找不到符号
+    public Collection<SItem> all() { return Collections.unmodifiableCollection(items.values()); }
+                      ^
+  符号:   类 SItem
+  位置: 类 ZeroItemManager
+D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v3\feature\item\ZeroItemManager.jav
+a:45: 错误: 找不到符号
+    public SItem find(ItemStack item) {
+           ^
+  符号:   类 SItem
+  位置: 类 ZeroItemManager
+D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v3\feature\achievement\ZeroAchievem
+entManager.java:15: 错误: 找不到符号
+    private final Map<String, SAchievement> registry = new HashMap<>();
+                              ^
+  符号:   类 SAchievement
+  位置: 类 ZeroAchievementManager
+D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v3\feature\achievement\ZeroAchievem
+entManager.java:17: 错误: 找不到符号
+    public ZeroAchievementManager register(SAchievement a) {
+                                           ^
+  符号:   类 SAchievement
+  位置: 类 ZeroAchievementManager
+D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v3\feature\achievement\ZeroAchievem
+entManager.java:27: 错误: 找不到符号
+    public boolean registerIfAbsent(SAchievement a) {
+                                    ^
+  符号:   类 SAchievement
+  位置: 类 ZeroAchievementManager
+D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v3\feature\achievement\ZeroAchievem
+entManager.java:41: 错误: 找不到符号
+    public SAchievement get(String fullId) {
+           ^
+  符号:   类 SAchievement
+  位置: 类 ZeroAchievementManager
+D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v3\feature\achievement\ZeroAchievem
+entManager.java:45: 错误: 找不到符号
+    public Collection<SAchievement> all() {
+                      ^
+  符号:   类 SAchievement
+  位置: 类 ZeroAchievementManager
+D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v3\feature\chat\ZeroChatManager.jav
+a:18: 错误: 找不到符号
+    private final List<ChatHandler> handlers = new CopyOnWriteArrayList<>();
+                       ^
+  符号:   类 ChatHandler
+  位置: 类 ZeroChatManager
+D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v3\feature\chat\ZeroChatManager.jav
+a:206: 错误: 找不到符号
+    public void registerHandler(ChatHandler handler) {
+                                ^
+  符号:   类 ChatHandler
+  位置: 类 ZeroChatManager
+D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v3\feature\chat\ZeroChatManager.jav
+a:211: 错误: 找不到符号
+    public void unregisterHandler(ChatHandler handler) {
+                                  ^
+  符号:   类 ChatHandler
+  位置: 类 ZeroChatManager
+D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v3\feature\chat\ZeroChatManager.jav
+a:215: 错误: 找不到符号
+    public List<ChatHandler> getHandlers() {
+                ^
+  符号:   类 ChatHandler
+  位置: 类 ZeroChatManager
+D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v3\feature\chat\ZeroChatManager.jav
+a:231: 错误: 程序包ChatHandler不存在
+    static final class ChatContextImpl implements ChatHandler.ChatContext {
+                                                             ^
+D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v3\feature\tick\ZeroTickManager.jav
+a:79: 错误: 找不到符号
+    private void safeRun(TickTask task, long tick) {
+                         ^
+  符号:   类 TickTask
+  位置: 类 ZeroTickManager
+D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v3\feature\tick\ZeroTickManager.jav
+a:112: 错误: 找不到符号
+    public long runLater(TickTask task, long delayTicks) {
+                         ^
+  符号:   类 TickTask
+  位置: 类 ZeroTickManager
+D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v3\feature\tick\ZeroTickManager.jav
+a:118: 错误: 找不到符号
+    public long runTimer(TickTask task, long delayTicks, long periodTicks) {
+                         ^
+  符号:   类 TickTask
+  位置: 类 ZeroTickManager
+D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v3\feature\tick\ZeroTickManager.jav
+a:124: 错误: 找不到符号
+    public long runTimer(TickTask task, long periodTicks) {
+                         ^
+  符号:   类 TickTask
+  位置: 类 ZeroTickManager
+D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v3\feature\tick\ZeroTickManager.jav
+a:25: 错误: 找不到符号
+        final TickTask task;
+              ^
+  符号:   类 TickTask
+  位置: 类 TickEntry
+D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v3\feature\tick\ZeroTickManager.jav
+a:30: 错误: 找不到符号
+        TickEntry(long id, TickTask task, long startTick, long period, boolean repeat) {
+                           ^
+  符号:   类 TickTask
+  位置: 类 TickEntry
+D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v1\ZeroBuyTagCommand.java:13: 错误: 找
+不到符号
+    private final main plugin;
+                  ^
+  符号:   类 main
+  位置: 类 ZeroBuyTagCommand
+D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v1\ZeroBuyTagCommand.java:15: 错误: 找
+不到符号
+    public ZeroBuyTagCommand(main plugin) {
+                             ^
+  符号:   类 main
+  位置: 类 ZeroBuyTagCommand
+D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v1\Zerogiveit.java:18: 错误: 找不到符号
+    private final main plugin;
+                  ^
+  符号:   类 main
+  位置: 类 Zerogiveit
+D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v1\Zerogiveit.java:20: 错误: 找不到符号
+    public Zerogiveit(main plugin) {
+                      ^
+  符号:   类 main
+  位置: 类 Zerogiveit
+D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v1\Zeromain.java:2: 错误: 程序包cn.ZeroE
+ngine.EngineLibraries.ZApi不存在
+import cn.ZeroEngine.EngineLibraries.ZApi.EngineDisableDoneEvent;
+                                         ^
+D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v1\Zeromain.java:3: 错误: 程序包cn.ZeroE
+ngine.EngineLibraries.ZApi不存在
+import cn.ZeroEngine.EngineLibraries.ZApi.EngineLoadDoneEvent;
+                                         ^
+D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v1\Zeromain.java:16: 错误: 程序包cn.Zero
+Engine.EngineLibraries.ZeroServer.Engine.v3.feature.Zeromain不存在
+import cn.ZeroEngine.EngineLibraries.ZeroServer.Engine.v3.feature.Zeromain.ZeroReachCommand;
+                                                                          ^
+D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v3\ZeroSF.java:21: 错误: 程序包cn.ZeroEn
+gine.EngineLibraries.ZeroServer.Engine.v3.feature.gui.impl不存在
+import cn.ZeroEngine.EngineLibraries.ZeroServer.Engine.v3.feature.gui.impl.ZeroGUIManagerImpl;
+                                                                          ^
+D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v3\ZeroSF.java:31: 错误: 程序包cn.ZeroEn
+gine.EngineLibraries.ZeroServer.Engine.v3.feature.gameplay.bedwars.impl不存在
+import cn.ZeroEngine.EngineLibraries.ZeroServer.Engine.v3.feature.gameplay.bedwars.impl.ZeroBedwarsImpl;
+                                                                                       ^
+D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v3\ZeroSF.java:33: 错误: 程序包cn.ZeroEn
+gine.EngineLibraries.ZeroServer.Engine.v3.feature.gameplay.horde.impl不存在
+import cn.ZeroEngine.EngineLibraries.ZeroServer.Engine.v3.feature.gameplay.horde.impl.ZeroHordeImpl;
+                                                                                     ^
+D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v3\ZeroSF.java:35: 错误: 程序包cn.ZeroEn
+gine.EngineLibraries.ZeroServer.Engine.v3.feature.gameplay.pvp.impl不存在
+import cn.ZeroEngine.EngineLibraries.ZeroServer.Engine.v3.feature.gameplay.pvp.impl.ZeroPvPArenaImpl;
+                                                                                   ^
+D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v3\ZeroSF.java:37: 错误: 程序包cn.ZeroEn
+gine.EngineLibraries.ZeroServer.Engine.v3.feature.gameplay.village.impl不存在
+import cn.ZeroEngine.EngineLibraries.ZeroServer.Engine.v3.feature.gameplay.village.impl.ZeroVillageDefenseImpl;
+                                                                                       ^
+D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v3\ZeroSF.java:68: 错误: 找不到符号
+public final class ZeroSF implements SFApi {
+                                     ^
+  符号: 类 SFApi
+D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v3\ZeroSF.java:95: 错误: 找不到符号
+    private cn.ZeroEngine.Engine.api.v3.feature.biome.ZeroBiomeManager biomeManager;
+                                                     ^
+  符号:   类 ZeroBiomeManager
+  位置: 程序包 cn.ZeroEngine.Engine.api.v3.feature.biome
+D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v3\ZeroSF.java:96: 错误: 找不到符号
+    private cn.ZeroEngine.Engine.api.v3.feature.biome.ZeroBiomeListener biomeListener;
+                                                     ^
+  符号:   类 ZeroBiomeListener
+  位置: 程序包 cn.ZeroEngine.Engine.api.v3.feature.biome
+D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v3\ZeroSF.java:109: 错误: 找不到符号
+    private ZeroBedwarsImpl bedwarsImpl;
+            ^
+  符号:   类 ZeroBedwarsImpl
+  位置: 类 ZeroSF
+D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v3\ZeroSF.java:111: 错误: 找不到符号
+    private ZeroPvPArenaImpl pvpImpl;
+            ^
+  符号:   类 ZeroPvPArenaImpl
+  位置: 类 ZeroSF
+D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v3\ZeroSF.java:113: 错误: 找不到符号
+    private ZeroHordeImpl hordeImpl;
+            ^
+  符号:   类 ZeroHordeImpl
+  位置: 类 ZeroSF
+D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v3\ZeroSF.java:115: 错误: 找不到符号
+    private ZeroVillageDefenseImpl villageDefImpl;
+            ^
+  符号:   类 ZeroVillageDefenseImpl
+  位置: 类 ZeroSF
+D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v3\ZeroSF.java:302: 错误: 找不到符号
+    public cn.ZeroEngine.Engine.api.v3.feature.biome.ZeroBiomeManager biomes() {
+                                                    ^
+  符号:   类 ZeroBiomeManager
+  位置: 程序包 cn.ZeroEngine.Engine.api.v3.feature.biome
+D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v3\feature\crop\ZeroCropListener.ja
+va:81: 错误: 找不到符号
+    private SCrop findMatureFallback(Block b) {
+            ^
+  符号:   类 SCrop
+  位置: 类 ZeroCropListener
+D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v3\feature\crop\ZeroCropListener.ja
+va:161: 错误: 找不到符号
+    private void harvest(Block block, SCrop crop, Player p) {
+                                      ^
+  符号:   类 SCrop
+  位置: 类 ZeroCropListener
+D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v3\feature\crop\ZeroCropManager.jav
+a:25: 错误: 找不到符号
+    private final Map<String, SCrop> registry = new HashMap<>();
+                              ^
+  符号:   类 SCrop
+  位置: 类 ZeroCropManager
+D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v3\feature\crop\ZeroCropManager.jav
+a:92: 错误: 找不到符号
+    public ZeroCropManager register(SCrop crop) {
+                                    ^
+  符号:   类 SCrop
+  位置: 类 ZeroCropManager
+D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v3\feature\crop\ZeroCropManager.jav
+a:102: 错误: 找不到符号
+    public boolean registerIfAbsent(SCrop crop) {
+                                    ^
+  符号:   类 SCrop
+  位置: 类 ZeroCropManager
+D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v3\feature\crop\ZeroCropManager.jav
+a:112: 错误: 找不到符号
+    public SCrop get(String id) { return registry.get(id); }
+           ^
+  符号:   类 SCrop
+  位置: 类 ZeroCropManager
+D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v3\feature\crop\ZeroCropManager.jav
+a:114: 错误: 找不到符号
+    public Collection<SCrop> all() { return Collections.unmodifiableCollection(registry.values()); }
+                      ^
+  符号:   类 SCrop
+  位置: 类 ZeroCropManager
+D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v3\feature\crop\ZeroCropManager.jav
+a:116: 错误: 找不到符号
+    public SCrop findAt(Block block) {
+           ^
+  符号:   类 SCrop
+  位置: 类 ZeroCropManager
+D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v3\feature\crop\ZeroCropManager.jav
+a:122: 错误: 找不到符号
+    public SCrop findFallback(Block block) {
+           ^
+  符号:   类 SCrop
+  位置: 类 ZeroCropManager
+D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v3\feature\crop\ZeroCropManager.jav
+a:143: 错误: 找不到符号
+    public boolean placeAt(Block block, SCrop crop, int stage) {
+                                        ^
+  符号:   类 SCrop
+  位置: 类 ZeroCropManager
+D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v3\feature\screen\ZeroScreenManager
+.java:35: 错误: 找不到符号
+    private final java.util.Map<String, SScreen> screens = new ConcurrentHashMap<>();
+                                        ^
+  符号:   类 SScreen
+  位置: 类 ZeroScreenManager
+D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v3\feature\screen\ZeroScreenManager
+.java:47: 错误: 找不到符号
+    public ZeroScreenManager register(SScreen screen) {
+                                      ^
+  符号:   类 SScreen
+  位置: 类 ZeroScreenManager
+D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v3\feature\screen\ZeroScreenManager
+.java:66: 错误: 找不到符号
+    public boolean registerIfAbsent(SScreen screen) {
+                                    ^
+  符号:   类 SScreen
+  位置: 类 ZeroScreenManager
+D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v3\feature\screen\ZeroScreenManager
+.java:110: 错误: 找不到符号
+    private void wireTriggerEvent(SScreen screen, Class<? extends Event> evt) {
+                                  ^
+  符号:   类 SScreen
+  位置: 类 ZeroScreenManager
+D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v3\feature\screen\ZeroScreenManager
+.java:138: 错误: 找不到符号
+    private void wireTriggerCommand(SScreen screen, String cmd) {
+                                    ^
+  符号:   类 SScreen
+  位置: 类 ZeroScreenManager
+D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v3\feature\screen\ZeroScreenManager
+.java:157: 错误: 找不到符号
+    public SScreen get(String id) { return screens.get(id); }
+           ^
+  符号:   类 SScreen
+  位置: 类 ZeroScreenManager
+D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v3\feature\screen\ZeroScreenManager
+.java:159: 错误: 找不到符号
+    public java.util.Collection<SScreen> all() { return java.util.Collections.unmodifiableCollection(screens.values());
+ }
+                                ^
+  符号:   类 SScreen
+  位置: 类 ZeroScreenManager
+D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v3\feature\screen\ZeroScreenManager
+.java:290: 错误: 找不到符号
+        final SScreen screen;
+              ^
+  符号:   类 SScreen
+  位置: 类 Pending
+D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v3\feature\screen\ZeroScreenManager
+.java:292: 错误: 找不到符号
+        Pending(SScreen screen, CompletableFuture<Boolean> future) {
+                ^
+  符号:   类 SScreen
+  位置: 类 Pending
+D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v3\feature\block\ZeroBlockListener.
+java:48: 错误: 找不到符号
+    private final Map<Location, SBlock> redstoneDefs = new ConcurrentHashMap<>();
+                                ^
+  符号:   类 SBlock
+  位置: 类 ZeroBlockListener
+D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v3\feature\block\ZeroBlockListener.
+java:129: 错误: 找不到符号
+    private void watchForRedstone(Block block, SBlock def) {
+                                               ^
+  符号:   类 SBlock
+  位置: 类 ZeroBlockListener
+D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v3\feature\block\ZeroBlockManager.j
+ava:26: 错误: 找不到符号
+    private final Map<String, SBlock> blocks = new HashMap<>();
+                              ^
+  符号:   类 SBlock
+  位置: 类 ZeroBlockManager
+D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v3\feature\block\ZeroBlockManager.j
+ava:38: 错误: 找不到符号
+    public ZeroBlockManager register(SBlock block) {
+                                     ^
+  符号:   类 SBlock
+  位置: 类 ZeroBlockManager
+D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v3\feature\block\ZeroBlockManager.j
+ava:52: 错误: 找不到符号
+    public boolean registerIfAbsent(SBlock block) {
+                                    ^
+  符号:   类 SBlock
+  位置: 类 ZeroBlockManager
+D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v3\feature\block\ZeroBlockManager.j
+ava:62: 错误: 找不到符号
+    public ZeroBlockManager registerAll(SBlock... blocks) {
+                                        ^
+  符号:   类 SBlock
+  位置: 类 ZeroBlockManager
+D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v3\feature\block\ZeroBlockManager.j
+ava:71: 错误: 找不到符号
+    public SBlock get(String id) { return blocks.get(id); }
+           ^
+  符号:   类 SBlock
+  位置: 类 ZeroBlockManager
+D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v3\feature\block\ZeroBlockManager.j
+ava:73: 错误: 找不到符号
+    public Collection<SBlock> all() { return Collections.unmodifiableCollection(blocks.values()); }
+                      ^
+  符号:   类 SBlock
+  位置: 类 ZeroBlockManager
+D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v3\feature\block\ZeroBlockManager.j
+ava:75: 错误: 找不到符号
+    public SBlock findItem(ItemStack item) {
+           ^
+  符号:   类 SBlock
+  位置: 类 ZeroBlockManager
+D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v3\feature\block\ZeroBlockManager.j
+ava:83: 错误: 找不到符号
+    public SBlock findAt(Block block) {
+           ^
+  符号:   类 SBlock
+  位置: 类 ZeroBlockManager
+D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v3\feature\block\ZeroBlockManager.j
+ava:92: 错误: 找不到符号
+    public void placeAt(Block block, SBlock blockDef) {
+                                     ^
+  符号:   类 SBlock
+  位置: 类 ZeroBlockManager
+D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v3\feature\block\ZeroBlockManager.j
+ava:107: 错误: 找不到符号
+    public Set<java.util.Map.Entry<Block, SBlock>> scanPoweredAround(Block source, int radius) {
+                                          ^
+  符号:   类 SBlock
+  位置: 类 ZeroBlockManager
+D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v3\feature\recipe\ZeroRecipeManager
+.java:20: 错误: 找不到符号
+    private final Map<String, SRecipe> registry = new HashMap<>();
+                              ^
+  符号:   类 SRecipe
+  位置: 类 ZeroRecipeManager
+D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v3\feature\recipe\ZeroRecipeManager
+.java:22: 错误: 找不到符号
+    private final Map<String, AdvancedCraftTable> tables = new HashMap<>();
+                              ^
+  符号:   类 AdvancedCraftTable
+  位置: 类 ZeroRecipeManager
+D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v3\feature\recipe\ZeroRecipeManager
+.java:23: 错误: 找不到符号
+    private final Map<Material, AdvancedCraftTable> defaultByMaterial = new ConcurrentHashMap<>();
+                                ^
+  符号:   类 AdvancedCraftTable
+  位置: 类 ZeroRecipeManager
+D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v3\feature\recipe\ZeroRecipeManager
+.java:29: 错误: 找不到符号
+    public boolean register(SRecipe r) {
+                            ^
+  符号:   类 SRecipe
+  位置: 类 ZeroRecipeManager
+D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v3\feature\recipe\ZeroRecipeManager
+.java:57: 错误: 找不到符号
+    public ZeroRecipeManager registerAll(SRecipe... recipes) {
+                                         ^
+  符号:   类 SRecipe
+  位置: 类 ZeroRecipeManager
+D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v3\feature\recipe\ZeroRecipeManager
+.java:65: 错误: 找不到符号
+    public SRecipe get(String id) { return registry.get(id); }
+           ^
+  符号:   类 SRecipe
+  位置: 类 ZeroRecipeManager
+D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v3\feature\recipe\ZeroRecipeManager
+.java:67: 错误: 找不到符号
+    public Collection<SRecipe> all() { return Collections.unmodifiableCollection(registry.values()); }
+                      ^
+  符号:   类 SRecipe
+  位置: 类 ZeroRecipeManager
+D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v3\feature\recipe\ZeroRecipeManager
+.java:71: 错误: 找不到符号
+    public AdvancedCraftTable registerTable(AdvancedCraftTable table) {
+                                            ^
+  符号:   类 AdvancedCraftTable
+  位置: 类 ZeroRecipeManager
+D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\Engine\api\v2\feature\enchant\SEnchantment.java:62: 警告: [removal] Old
+Enum 中的 name() 已过时, 且标记为待删除
+                sf.info("[Enchant] Attribute resolved: '" + name + "' -> '" + matched + "' (" + result.name() + ")");
+                                                                                                      ^
+D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\Engine\api\v2\feature\enchant\SFAttr.java:120: 警告: [removal] Attribut
+e 中的 values() 已过时, 且标记为待删除
+            Attribute[] values = Attribute.values();
+                                          ^
+D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\Engine\api\v2\feature\enchant\SFAttr.java:121: 警告: [removal] OldEnum 
+中的 name() 已过时, 且标记为待删除
+            for (Attribute a : values) REGISTRY.put(a.name(), a);
+                                                     ^
+D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\Engine\api\v2\feature\item\SItem.java:32: 警告: [removal] OldEnum 中的 na
+me() 已过时, 且标记为待删除
+                sf.info("[Item] Attribute lookup: '" + name + "' -> matched '" + a.name() + "'");
+                                                                                  ^
+D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\Engine\api\v2\feature\item\SItem.java:87: 警告: [removal] AttributeModi
+fier 中的 AttributeModifier(@org.jetbrains.annotations.NotNull UUID,@org.jetbrains.annotations.NotNull String,double,@org
+.jetbrains.annotations.NotNull Operation,@org.jetbrains.annotations.Nullable EquipmentSlot) 已过时, 且标记为待删除
+                meta.addAttributeModifier(attr, new AttributeModifier(
+                                                ^
+D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\Engine\api\v2\feature\item\SItem.java:150: 警告: [removal] AttributeMod
+ifier 中的 AttributeModifier(@org.jetbrains.annotations.NotNull UUID,@org.jetbrains.annotations.NotNull String,double,@or
+g.jetbrains.annotations.NotNull Operation,@org.jetbrains.annotations.Nullable EquipmentSlot) 已过时, 且标记为待删除
+                    meta.addAttributeModifier(attr, new AttributeModifier(
+                                                    ^
+D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v2\feature\world\ZeroWorldManager.j
+ava:58: 警告: [removal] GameRule 中的 DO_DAYLIGHT_CYCLE 已过时, 且标记为待删除
+        world.setGameRule(org.bukkit.GameRule.DO_DAYLIGHT_CYCLE, false);
+                                             ^
+D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v2\feature\world\ZeroWorldManager.j
+ava:62: 警告: [removal] GameRule 中的 DO_DAYLIGHT_CYCLE 已过时, 且标记为待删除
+        world.setGameRule(org.bukkit.GameRule.DO_DAYLIGHT_CYCLE, true);
+                                             ^
+D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v2\feature\world\ZeroWorldManager.j
+ava:90: 警告: [removal] WorldBorder 中的 setSize(double,long) 已过时, 且标记为待删除
+        border.setSize(size, seconds);
+              ^
+D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v2\feature\world\ZeroWorldManager.j
+ava:103: 警告: [removal] GameRule 中的 DO_MOB_SPAWNING 已过时, 且标记为待删除
+        world.setGameRule(org.bukkit.GameRule.DO_MOB_SPAWNING, spawn);
+                                             ^
+D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v2\feature\world\ZeroWorldManager.j
+ava:107: 警告: [removal] GameRule 中的 DO_FIRE_TICK 已过时, 且标记为待删除
+        world.setGameRule(org.bukkit.GameRule.DO_FIRE_TICK, spread);
+                                             ^
+D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v2\feature\world\ZeroWorldManager.j
+ava:119: 警告: [removal] GameRule 中的 DO_FIRE_TICK 已过时, 且标记为待删除
+                world.getGameRuleValue(org.bukkit.GameRule.DO_FIRE_TICK),
+                                                          ^
+D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v2\feature\world\ZeroWorldManager.j
+ava:120: 警告: [removal] GameRule 中的 DO_MOB_SPAWNING 已过时, 且标记为待删除
+                world.getGameRuleValue(org.bukkit.GameRule.DO_MOB_SPAWNING)
+                                                          ^
+D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v2\feature\world\ZeroWorldManager.j
+ava:133: 警告: [removal] GameRule 中的 DO_FIRE_TICK 已过时, 且标记为待删除
+        world.setGameRule(org.bukkit.GameRule.DO_FIRE_TICK, p.fireSpread);
+                                             ^
+D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v2\feature\world\ZeroWorldManager.j
+ava:134: 警告: [removal] GameRule 中的 DO_MOB_SPAWNING 已过时, 且标记为待删除
+        world.setGameRule(org.bukkit.GameRule.DO_MOB_SPAWNING, p.mobSpawning);
+                                             ^
+D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\Engine\api\v3\feature\item\SItem.java:45: 警告: [removal] OldEnum 中的 na
+me() 已过时, 且标记为待删除
+                sf.info("[Item] Attribute lookup: '" + name + "' -> matched '" + a.name() + "'");
+                                                                                  ^
+D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\Engine\api\v3\feature\item\SItem.java:112: 警告: [removal] AttributeMod
+ifier 中的 AttributeModifier(@org.jetbrains.annotations.NotNull UUID,@org.jetbrains.annotations.NotNull String,double,@or
+g.jetbrains.annotations.NotNull Operation,@org.jetbrains.annotations.Nullable EquipmentSlot) 已过时, 且标记为待删除
+                meta.addAttributeModifier(attr, new AttributeModifier(
+                                                ^
+D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\Engine\api\v3\feature\item\SItem.java:240: 警告: [removal] AttributeMod
+ifier 中的 AttributeModifier(@org.jetbrains.annotations.NotNull UUID,@org.jetbrains.annotations.NotNull String,double,@or
+g.jetbrains.annotations.NotNull Operation,@org.jetbrains.annotations.Nullable EquipmentSlot) 已过时, 且标记为待删除
+                    meta.addAttributeModifier(attr, new AttributeModifier(
+                                                    ^
+D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\Engine\api\v3\feature\enchant\SEnchantment.java:62: 警告: [removal] Old
+Enum 中的 name() 已过时, 且标记为待删除
+                sf.info("[Enchant] Attribute resolved: '" + name + "' -> '" + matched + "' (" + result.name() + ")");
+                                                                                                      ^
+D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\Engine\api\v3\feature\enchant\SFAttr.java:137: 警告: [removal] Attribut
+e 中的 values() 已过时, 且标记为待删除
+                Attribute[] values = Attribute.values();
+                                              ^
+D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\Engine\api\v3\feature\enchant\SFAttr.java:153: 警告: [removal] OldEnum 
+中的 name() 已过时, 且标记为待删除
+        try { sources[0] = a.name(); } catch (Throwable ignore) { sources[0] = null; }
+                            ^
+D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\Engine\api\v3\feature\recipe\SRecipe.java:57: 警告: [removal] ExactChoi
+ce 中的 ExactChoice(List<ItemStack>) 已过时, 且标记为待删除
+            return new RecipeChoice.ExactChoice(Collections.singletonList(exact));
+                   ^
+D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\Engine\api\v3\main\SFCommandOps.java:59: 警告: [removal] org.bukkit.plu
+gin 中的 SimplePluginManager 已过时, 且标记为待删除
+            if (Bukkit.getPluginManager() instanceof SimplePluginManager spm) {
+                                                     ^
+D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\Engine\api\v3\main\SFCommandOps.java:60: 警告: [removal] org.bukkit.plu
+gin 中的 SimplePluginManager 已过时, 且标记为待删除
+                java.lang.reflect.Field fCmdMap = SimplePluginManager.class.getDeclaredField("commandMap");
+                                                  ^
+D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v3\feature\world\ZeroWorldManager.j
+ava:58: 警告: [removal] GameRule 中的 DO_DAYLIGHT_CYCLE 已过时, 且标记为待删除
+        world.setGameRule(org.bukkit.GameRule.DO_DAYLIGHT_CYCLE, false);
+                                             ^
+D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v3\feature\world\ZeroWorldManager.j
+ava:62: 警告: [removal] GameRule 中的 DO_DAYLIGHT_CYCLE 已过时, 且标记为待删除
+        world.setGameRule(org.bukkit.GameRule.DO_DAYLIGHT_CYCLE, true);
+                                             ^
+D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v3\feature\world\ZeroWorldManager.j
+ava:90: 警告: [removal] WorldBorder 中的 setSize(double,long) 已过时, 且标记为待删除
+        border.setSize(size, seconds);
+              ^
+D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v3\feature\world\ZeroWorldManager.j
+ava:103: 警告: [removal] GameRule 中的 DO_MOB_SPAWNING 已过时, 且标记为待删除
+        world.setGameRule(org.bukkit.GameRule.DO_MOB_SPAWNING, spawn);
+                                             ^
+D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v3\feature\world\ZeroWorldManager.j
+ava:107: 警告: [removal] GameRule 中的 DO_FIRE_TICK 已过时, 且标记为待删除
+        world.setGameRule(org.bukkit.GameRule.DO_FIRE_TICK, spread);
+                                             ^
+D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v3\feature\world\ZeroWorldManager.j
+ava:119: 警告: [removal] GameRule 中的 DO_FIRE_TICK 已过时, 且标记为待删除
+                world.getGameRuleValue(org.bukkit.GameRule.DO_FIRE_TICK),
+                                                          ^
+D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v3\feature\world\ZeroWorldManager.j
+ava:120: 警告: [removal] GameRule 中的 DO_MOB_SPAWNING 已过时, 且标记为待删除
+                world.getGameRuleValue(org.bukkit.GameRule.DO_MOB_SPAWNING)
+                                                          ^
+D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v3\feature\world\ZeroWorldManager.j
+ava:133: 警告: [removal] GameRule 中的 DO_FIRE_TICK 已过时, 且标记为待删除
+        world.setGameRule(org.bukkit.GameRule.DO_FIRE_TICK, p.fireSpread);
+                                             ^
+D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v3\feature\world\ZeroWorldManager.j
+ava:134: 警告: [removal] GameRule 中的 DO_MOB_SPAWNING 已过时, 且标记为待删除
+        world.setGameRule(org.bukkit.GameRule.DO_MOB_SPAWNING, p.mobSpawning);
+                                             ^
+D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v3\feature\enchant\ZeroEnchantAttri
+buteListener.java:111: 警告: [removal] AttributeInstance 中的 getModifier(@org.jetbrains.annotations.NotNull UUID) 已过时, 且标记
+为待删除
+                if (inst.getModifier(modId) != null) continue;
+                        ^
+D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v3\feature\item\ZeroItemListener.ja
+va:217: 警告: [removal] AttributeInstance 中的 getModifier(@org.jetbrains.annotations.NotNull UUID) 已过时, 且标记为待删除
+                if (inst.getModifier(modId) != null) continue;
+                        ^
+D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v3\feature\item\ZeroItemListener.ja
+va:234: 警告: [removal] AttributeInstance 中的 getModifier(@org.jetbrains.annotations.NotNull UUID) 已过时, 且标记为待删除
+                org.bukkit.attribute.AttributeModifier m = inst.getModifier(modId);
+                                                               ^
+D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v3\feature\main\ZeroReachManager.ja
+va:76: 警告: [removal] AttributeInstance 中的 getModifier(@org.jetbrains.annotations.NotNull UUID) 已过时, 且标记为待删除
+        AttributeModifier existing = inst.getModifier(BLOCK_MOD);
+                                         ^
+D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v3\feature\main\ZeroReachManager.ja
+va:78: 警告: [removal] AttributeModifier 中的 AttributeModifier(@org.jetbrains.annotations.NotNull UUID,@org.jetbrains.anno
+tations.NotNull String,double,@org.jetbrains.annotations.NotNull Operation) 已过时, 且标记为待删除
+        inst.addModifier(new AttributeModifier(BLOCK_MOD, "sf_reach_block",
+                         ^
+D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v3\feature\main\ZeroReachManager.ja
+va:86: 警告: [removal] AttributeInstance 中的 getModifier(@org.jetbrains.annotations.NotNull UUID) 已过时, 且标记为待删除
+        AttributeModifier existing = inst.getModifier(ENTITY_MOD);
+                                         ^
+D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v3\feature\main\ZeroReachManager.ja
+va:88: 警告: [removal] AttributeModifier 中的 AttributeModifier(@org.jetbrains.annotations.NotNull UUID,@org.jetbrains.anno
+tations.NotNull String,double,@org.jetbrains.annotations.NotNull Operation) 已过时, 且标记为待删除
+        inst.addModifier(new AttributeModifier(ENTITY_MOD, "sf_reach_entity",
+                         ^
+D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v3\feature\main\ZeroReachManager.ja
+va:96: 警告: [removal] AttributeInstance 中的 getModifier(@org.jetbrains.annotations.NotNull UUID) 已过时, 且标记为待删除
+        AttributeModifier m = inst.getModifier(BLOCK_MOD);
+                                  ^
+D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v3\feature\main\ZeroReachManager.ja
+va:104: 警告: [removal] AttributeInstance 中的 getModifier(@org.jetbrains.annotations.NotNull UUID) 已过时, 且标记为待删除
+        AttributeModifier m = inst.getModifier(ENTITY_MOD);
+                                  ^
+D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v3\feature\main\ZeroReachManager.ja
+va:113: 警告: [removal] AttributeInstance 中的 getModifier(@org.jetbrains.annotations.NotNull UUID) 已过时, 且标记为待删除
+        AttributeModifier m = inst.getModifier(BLOCK_MOD);
+                                  ^
+D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v3\feature\main\ZeroReachManager.ja
+va:122: 警告: [removal] AttributeInstance 中的 getModifier(@org.jetbrains.annotations.NotNull UUID) 已过时, 且标记为待删除
+        AttributeModifier m = inst.getModifier(ENTITY_MOD);
+                                  ^
+D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v2\feature\enchant\ZeroEnchantAnvil
+Listener.java:64: 警告: [removal] AnvilInventory 中的 getRepairCost() 已过时, 且标记为待删除
+            inv.setRepairCost(Math.max(inv.getRepairCost(), totalCost));
+                                          ^
+D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v2\feature\enchant\ZeroEnchantAnvil
+Listener.java:64: 警告: [removal] AnvilInventory 中的 setRepairCost(int) 已过时, 且标记为待删除
+            inv.setRepairCost(Math.max(inv.getRepairCost(), totalCost));
+               ^
+D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v2\feature\enchant\ZeroEnchantAttri
+buteListener.java:111: 警告: [removal] AttributeInstance 中的 getModifier(@org.jetbrains.annotations.NotNull UUID) 已过时, 且标记
+为待删除
+                if (inst.getModifier(modId) != null) continue;
+                        ^
+D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v2\feature\item\ZeroItemListener.ja
+va:102: 警告: [removal] AttributeInstance 中的 getModifier(@org.jetbrains.annotations.NotNull UUID) 已过时, 且标记为待删除
+                if (inst.getModifier(modId) != null) continue;
+                        ^
+D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v2\feature\item\ZeroItemListener.ja
+va:119: 警告: [removal] AttributeInstance 中的 getModifier(@org.jetbrains.annotations.NotNull UUID) 已过时, 且标记为待删除
+                org.bukkit.attribute.AttributeModifier m = inst.getModifier(modId);
+                                                               ^
+D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v2\feature\main\ZeroReachManager.ja
+va:76: 警告: [removal] AttributeInstance 中的 getModifier(@org.jetbrains.annotations.NotNull UUID) 已过时, 且标记为待删除
+        AttributeModifier existing = inst.getModifier(BLOCK_MOD);
+                                         ^
+D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v2\feature\main\ZeroReachManager.ja
+va:78: 警告: [removal] AttributeModifier 中的 AttributeModifier(@org.jetbrains.annotations.NotNull UUID,@org.jetbrains.anno
+tations.NotNull String,double,@org.jetbrains.annotations.NotNull Operation) 已过时, 且标记为待删除
+        inst.addModifier(new AttributeModifier(BLOCK_MOD, "sf_reach_block",
+                         ^
+D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v2\feature\main\ZeroReachManager.ja
+va:86: 警告: [removal] AttributeInstance 中的 getModifier(@org.jetbrains.annotations.NotNull UUID) 已过时, 且标记为待删除
+        AttributeModifier existing = inst.getModifier(ENTITY_MOD);
+                                         ^
+D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v2\feature\main\ZeroReachManager.ja
+va:88: 警告: [removal] AttributeModifier 中的 AttributeModifier(@org.jetbrains.annotations.NotNull UUID,@org.jetbrains.anno
+tations.NotNull String,double,@org.jetbrains.annotations.NotNull Operation) 已过时, 且标记为待删除
+        inst.addModifier(new AttributeModifier(ENTITY_MOD, "sf_reach_entity",
+                         ^
+D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v2\feature\main\ZeroReachManager.ja
+va:96: 警告: [removal] AttributeInstance 中的 getModifier(@org.jetbrains.annotations.NotNull UUID) 已过时, 且标记为待删除
+        AttributeModifier m = inst.getModifier(BLOCK_MOD);
+                                  ^
+D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v2\feature\main\ZeroReachManager.ja
+va:104: 警告: [removal] AttributeInstance 中的 getModifier(@org.jetbrains.annotations.NotNull UUID) 已过时, 且标记为待删除
+        AttributeModifier m = inst.getModifier(ENTITY_MOD);
+                                  ^
+D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v2\feature\main\ZeroReachManager.ja
+va:113: 警告: [removal] AttributeInstance 中的 getModifier(@org.jetbrains.annotations.NotNull UUID) 已过时, 且标记为待删除
+        AttributeModifier m = inst.getModifier(BLOCK_MOD);
+                                  ^
+D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v2\feature\main\ZeroReachManager.ja
+va:122: 警告: [removal] AttributeInstance 中的 getModifier(@org.jetbrains.annotations.NotNull UUID) 已过时, 且标记为待删除
+        AttributeModifier m = inst.getModifier(ENTITY_MOD);
+                                  ^
+D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v2\feature\engine\ZeroMonsterAttrib
+uteImpl.java:70: 警告: [removal] Attribute 中的 values() 已过时, 且标记为待删除
+        for (Attribute attr : Attribute.values()) {
+                                       ^
+D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v2\feature\engine\ZeroMonsterAttrib
+uteImpl.java:115: 警告: [removal] AttributeModifier 中的 AttributeModifier(@org.jetbrains.annotations.NotNull UUID,@org.jet
+brains.annotations.NotNull String,double,@org.jetbrains.annotations.NotNull Operation) 已过时, 且标记为待删除
+            inst.addModifier(new AttributeModifier(
+                             ^
+D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v2\feature\world\ZeroWorldCommand.j
+ava:161: 警告: [removal] GameRule 中的 DO_MOB_SPAWNING 已过时, 且标记为待删除
+                w.getGameRuleValue(org.bukkit.GameRule.DO_MOB_SPAWNING);
+                                                      ^
+D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v2\feature\world\ZeroWorldCommand.j
+ava:169: 警告: [removal] GameRule 中的 DO_FIRE_TICK 已过时, 且标记为待删除
+                w.getGameRuleValue(org.bukkit.GameRule.DO_FIRE_TICK);
+                                                      ^
+D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v2\feature\world\ZeroWorldCommand.j
+ava:214: 警告: [removal] GameRule 中的 DO_MOB_SPAWNING 已过时, 且标记为待删除
+        sf.msg(s, ChatColor.YELLOW + "生物生成: " + (w.getGameRuleValue(org.bukkit.GameRule.DO_MOB_SPAWNING) ? ChatColor.GR
+EEN + "开" : ChatColor.RED + "关"));
+                                                                                       ^
+D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v2\feature\world\ZeroWorldCommand.j
+ava:215: 警告: [removal] GameRule 中的 DO_FIRE_TICK 已过时, 且标记为待删除
+        sf.msg(s, ChatColor.YELLOW + "火焰蔓延: " + (w.getGameRuleValue(org.bukkit.GameRule.DO_FIRE_TICK) ? ChatColor.GREEN
+ + "开" : ChatColor.RED + "关"));
+                                                                                       ^
+D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v3\feature\enchant\ZeroEnchantAnvil
+Listener.java:105: 警告: [removal] AnvilInventory 中的 getRepairCost() 已过时, 且标记为待删除
+                    inv.setRepairCost(Math.max(inv.getRepairCost(), extraCost));
+                                                  ^
+D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v3\feature\enchant\ZeroEnchantAnvil
+Listener.java:105: 警告: [removal] AnvilInventory 中的 setRepairCost(int) 已过时, 且标记为待删除
+                    inv.setRepairCost(Math.max(inv.getRepairCost(), extraCost));
+                       ^
+D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v3\feature\enchant\ZeroEnchantAnvil
+Listener.java:109: 警告: [removal] AnvilInventory 中的 getRepairCost() 已过时, 且标记为待删除
+                    try { inv.setRepairCost(Math.max(inv.getRepairCost(), extraCost)); } catch (Throwable ignore) {}
+                                                        ^
+D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v3\feature\enchant\ZeroEnchantAnvil
+Listener.java:109: 警告: [removal] AnvilInventory 中的 setRepairCost(int) 已过时, 且标记为待删除
+                    try { inv.setRepairCost(Math.max(inv.getRepairCost(), extraCost)); } catch (Throwable ignore) {}
+                             ^
+D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v3\feature\engine\ZeroMonsterAttrib
+uteImpl.java:70: 警告: [removal] Attribute 中的 values() 已过时, 且标记为待删除
+        for (Attribute attr : Attribute.values()) {
+                                       ^
+D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v3\feature\engine\ZeroMonsterAttrib
+uteImpl.java:115: 警告: [removal] AttributeModifier 中的 AttributeModifier(@org.jetbrains.annotations.NotNull UUID,@org.jet
+brains.annotations.NotNull String,double,@org.jetbrains.annotations.NotNull Operation) 已过时, 且标记为待删除
+            inst.addModifier(new AttributeModifier(
+                             ^
+D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v3\feature\world\ZeroWorldCommand.j
+ava:161: 警告: [removal] GameRule 中的 DO_MOB_SPAWNING 已过时, 且标记为待删除
+                w.getGameRuleValue(org.bukkit.GameRule.DO_MOB_SPAWNING);
+                                                      ^
+D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v3\feature\world\ZeroWorldCommand.j
+ava:169: 警告: [removal] GameRule 中的 DO_FIRE_TICK 已过时, 且标记为待删除
+                w.getGameRuleValue(org.bukkit.GameRule.DO_FIRE_TICK);
+                                                      ^
+D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v3\feature\world\ZeroWorldCommand.j
+ava:214: 警告: [removal] GameRule 中的 DO_MOB_SPAWNING 已过时, 且标记为待删除
+        sf.msg(s, ChatColor.YELLOW + "生物生成: " + (w.getGameRuleValue(org.bukkit.GameRule.DO_MOB_SPAWNING) ? ChatColor.GR
+EEN + "开" : ChatColor.RED + "关"));
+                                                                                       ^
+D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v3\feature\world\ZeroWorldCommand.j
+ava:215: 警告: [removal] GameRule 中的 DO_FIRE_TICK 已过时, 且标记为待删除
+        sf.msg(s, ChatColor.YELLOW + "火焰蔓延: " + (w.getGameRuleValue(org.bukkit.GameRule.DO_FIRE_TICK) ? ChatColor.GREEN
+ + "开" : ChatColor.RED + "关"));
+                                                                                       ^
+注: 某些输入文件使用或覆盖了已过时的 API。
+注: 有关详细信息, 请使用 -Xlint:deprecation 重新编译。
+注: 某些输入文件使用了未经检查或不安全的操作。
+注: 有关详细信息, 请使用 -Xlint:unchecked 重新编译。
+100 个错误
+73 个警告
+
+> Task :compileJava FAILED
+
+[Incubating] Problems report is available at: file:///D:/%E7%B4%A0%E6%9D%90/mods/ZeroEngine/build/reports/problems/problems-report.html
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':compileJava' (registered by plugin class 'org.gradle.api.plugins.JavaBasePlugin').
+> Compilation failed; see the compiler output below.
+  注: 有关详细信息, 请使用 -Xlint:deprecation 重新编译。
+  D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v2\feature\chat\ZeroChatManager.j
+ava:18: 错误: 找不到符号
+      private final List<ChatHandler> handlers = new CopyOnWriteArrayList<>();
+                         ^
+    符号:   类 ChatHandler
+    位置: 类 ZeroChatManager
+  D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v2\feature\chat\ZeroChatManager.j
+ava:206: 错误: 找不到符号
+      public void registerHandler(ChatHandler handler) {
+                                  ^
+    符号:   类 ChatHandler
+    位置: 类 ZeroChatManager
+  D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v2\feature\chat\ZeroChatManager.j
+ava:211: 错误: 找不到符号
+      public void unregisterHandler(ChatHandler handler) {
+                                    ^
+    符号:   类 ChatHandler
+    位置: 类 ZeroChatManager
+  D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v2\feature\chat\ZeroChatManager.j
+ava:215: 错误: 找不到符号
+      public List<ChatHandler> getHandlers() {
+                  ^
+    符号:   类 ChatHandler
+    位置: 类 ZeroChatManager
+  D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v2\feature\tick\ZeroTickManager.j
+ava:79: 错误: 找不到符号
+      private void safeRun(TickTask task, long tick) {
+                           ^
+    符号:   类 TickTask
+    位置: 类 ZeroTickManager
+  D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v2\feature\tick\ZeroTickManager.j
+ava:112: 错误: 找不到符号
+      public long runLater(TickTask task, long delayTicks) {
+                           ^
+    符号:   类 TickTask
+    位置: 类 ZeroTickManager
+  D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v2\feature\tick\ZeroTickManager.j
+ava:118: 错误: 找不到符号
+      public long runTimer(TickTask task, long delayTicks, long periodTicks) {
+                           ^
+    符号:   类 TickTask
+    位置: 类 ZeroTickManager
+  D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v2\feature\tick\ZeroTickManager.j
+ava:124: 错误: 找不到符号
+      public long runTimer(TickTask task, long periodTicks) {
+                           ^
+    符号:   类 TickTask
+    位置: 类 ZeroTickManager
+  D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v2\feature\tick\ZeroTickManager.j
+ava:25: 错误: 找不到符号
+          final TickTask task;
+                ^
+    符号:   类 TickTask
+    位置: 类 TickEntry
+  D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v2\feature\tick\ZeroTickManager.j
+ava:30: 错误: 找不到符号
+          TickEntry(long id, TickTask task, long startTick, long period, boolean repeat) {
+                             ^
+    符号:   类 TickTask
+    位置: 类 TickEntry
+  D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\Engine\api\v3\feature\item\SItem.java:69: 错误: 找不到符号
+      public List<DropSource> dropSources() { return Collections.emptyList(); }
+                  ^
+    符号:   类 DropSource
+    位置: 类 SItem
+  D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\Engine\api\v3\feature\recipe\AdvancedCraftTable.java:19: 错误: 找不到符号
+      public SChestGUI craftGUI(ZeroRecipeManager manager) { return null; }
+                                ^
+    符号:   类 ZeroRecipeManager
+    位置: 类 AdvancedCraftTable
+  D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v3\feature\item\ZeroItemManager.j
+ava:9: 错误: 找不到符号
+      private final Map<String, SItem> items = new HashMap<>();
+                                ^
+    符号:   类 SItem
+    位置: 类 ZeroItemManager
+  D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v3\feature\item\ZeroItemManager.j
+ava:11: 错误: 找不到符号
+      public ZeroItemManager register(SItem item) {
+                                      ^
+    符号:   类 SItem
+    位置: 类 ZeroItemManager
+  D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v3\feature\item\ZeroItemManager.j
+ava:22: 错误: 找不到符号
+      public boolean registerIfAbsent(SItem item) {
+                                      ^
+    符号:   类 SItem
+    位置: 类 ZeroItemManager
+  D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v3\feature\item\ZeroItemManager.j
+ava:32: 错误: 找不到符号
+      public ZeroItemManager registerAll(SItem... items) {
+                                         ^
+    符号:   类 SItem
+    位置: 类 ZeroItemManager
+  D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v3\feature\item\ZeroItemManager.j
+ava:41: 错误: 找不到符号
+      public SItem get(String id) { return items.get(id); }
+             ^
+    符号:   类 SItem
+    位置: 类 ZeroItemManager
+  D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v3\feature\item\ZeroItemManager.j
+ava:43: 错误: 找不到符号
+      public Collection<SItem> all() { return Collections.unmodifiableCollection(items.values()); }
+                        ^
+    符号:   类 SItem
+    位置: 类 ZeroItemManager
+  D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v3\feature\item\ZeroItemManager.j
+ava:45: 错误: 找不到符号
+      public SItem find(ItemStack item) {
+             ^
+    符号:   类 SItem
+    位置: 类 ZeroItemManager
+  D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v3\feature\achievement\ZeroAchiev
+ementManager.java:15: 错误: 找不到符号
+      private final Map<String, SAchievement> registry = new HashMap<>();
+                                ^
+    符号:   类 SAchievement
+    位置: 类 ZeroAchievementManager
+  D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v3\feature\achievement\ZeroAchiev
+ementManager.java:17: 错误: 找不到符号
+      public ZeroAchievementManager register(SAchievement a) {
+                                             ^
+    符号:   类 SAchievement
+    位置: 类 ZeroAchievementManager
+  D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v3\feature\achievement\ZeroAchiev
+ementManager.java:27: 错误: 找不到符号
+      public boolean registerIfAbsent(SAchievement a) {
+                                      ^
+    符号:   类 SAchievement
+    位置: 类 ZeroAchievementManager
+  D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v3\feature\achievement\ZeroAchiev
+ementManager.java:41: 错误: 找不到符号
+      public SAchievement get(String fullId) {
+             ^
+    符号:   类 SAchievement
+    位置: 类 ZeroAchievementManager
+  D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v3\feature\achievement\ZeroAchiev
+ementManager.java:45: 错误: 找不到符号
+      public Collection<SAchievement> all() {
+                        ^
+    符号:   类 SAchievement
+    位置: 类 ZeroAchievementManager
+  D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v3\feature\chat\ZeroChatManager.j
+ava:18: 错误: 找不到符号
+      private final List<ChatHandler> handlers = new CopyOnWriteArrayList<>();
+                         ^
+    符号:   类 ChatHandler
+    位置: 类 ZeroChatManager
+  D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v3\feature\chat\ZeroChatManager.j
+ava:206: 错误: 找不到符号
+      public void registerHandler(ChatHandler handler) {
+                                  ^
+    符号:   类 ChatHandler
+    位置: 类 ZeroChatManager
+  D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v3\feature\chat\ZeroChatManager.j
+ava:211: 错误: 找不到符号
+      public void unregisterHandler(ChatHandler handler) {
+                                    ^
+    符号:   类 ChatHandler
+    位置: 类 ZeroChatManager
+  D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v3\feature\chat\ZeroChatManager.j
+ava:215: 错误: 找不到符号
+      public List<ChatHandler> getHandlers() {
+                  ^
+    符号:   类 ChatHandler
+    位置: 类 ZeroChatManager
+  D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v3\feature\tick\ZeroTickManager.j
+ava:79: 错误: 找不到符号
+      private void safeRun(TickTask task, long tick) {
+                           ^
+    符号:   类 TickTask
+    位置: 类 ZeroTickManager
+  D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v3\feature\tick\ZeroTickManager.j
+ava:112: 错误: 找不到符号
+      public long runLater(TickTask task, long delayTicks) {
+                           ^
+    符号:   类 TickTask
+    位置: 类 ZeroTickManager
+  D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v3\feature\tick\ZeroTickManager.j
+ava:118: 错误: 找不到符号
+      public long runTimer(TickTask task, long delayTicks, long periodTicks) {
+                           ^
+    符号:   类 TickTask
+    位置: 类 ZeroTickManager
+  D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v3\feature\tick\ZeroTickManager.j
+ava:124: 错误: 找不到符号
+      public long runTimer(TickTask task, long periodTicks) {
+                           ^
+    符号:   类 TickTask
+    位置: 类 ZeroTickManager
+  D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v3\feature\tick\ZeroTickManager.j
+ava:25: 错误: 找不到符号
+          final TickTask task;
+                ^
+    符号:   类 TickTask
+    位置: 类 TickEntry
+  D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v3\feature\tick\ZeroTickManager.j
+ava:30: 错误: 找不到符号
+          TickEntry(long id, TickTask task, long startTick, long period, boolean repeat) {
+                             ^
+    符号:   类 TickTask
+    位置: 类 TickEntry
+  D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v1\ZeroBuyTagCommand.java:13: 错误:
+ 找不到符号
+      private final main plugin;
+                    ^
+    符号:   类 main
+    位置: 类 ZeroBuyTagCommand
+  D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v1\ZeroBuyTagCommand.java:15: 错误:
+ 找不到符号
+      public ZeroBuyTagCommand(main plugin) {
+                               ^
+    符号:   类 main
+    位置: 类 ZeroBuyTagCommand
+  D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v1\Zerogiveit.java:18: 错误: 找不到符号
+      private final main plugin;
+                    ^
+    符号:   类 main
+    位置: 类 Zerogiveit
+  D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v1\Zerogiveit.java:20: 错误: 找不到符号
+      public Zerogiveit(main plugin) {
+                        ^
+    符号:   类 main
+    位置: 类 Zerogiveit
+  D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v3\ZeroSF.java:95: 错误: 找不到符号
+      private cn.ZeroEngine.Engine.api.v3.feature.biome.ZeroBiomeManager biomeManager;
+                                                       ^
+    符号:   类 ZeroBiomeManager
+    位置: 程序包 cn.ZeroEngine.Engine.api.v3.feature.biome
+  D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v3\ZeroSF.java:96: 错误: 找不到符号
+      private cn.ZeroEngine.Engine.api.v3.feature.biome.ZeroBiomeListener biomeListener;
+                                                       ^
+    符号:   类 ZeroBiomeListener
+    位置: 程序包 cn.ZeroEngine.Engine.api.v3.feature.biome
+  D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v3\ZeroSF.java:109: 错误: 找不到符号
+      private ZeroBedwarsImpl bedwarsImpl;
+              ^
+    符号:   类 ZeroBedwarsImpl
+    位置: 类 ZeroSF
+  D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v3\ZeroSF.java:111: 错误: 找不到符号
+      private ZeroPvPArenaImpl pvpImpl;
+              ^
+    符号:   类 ZeroPvPArenaImpl
+    位置: 类 ZeroSF
+  D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v3\ZeroSF.java:113: 错误: 找不到符号
+      private ZeroHordeImpl hordeImpl;
+              ^
+    符号:   类 ZeroHordeImpl
+    位置: 类 ZeroSF
+  D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v3\ZeroSF.java:115: 错误: 找不到符号
+      private ZeroVillageDefenseImpl villageDefImpl;
+              ^
+    符号:   类 ZeroVillageDefenseImpl
+    位置: 类 ZeroSF
+  D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v3\ZeroSF.java:302: 错误: 找不到符号
+      public cn.ZeroEngine.Engine.api.v3.feature.biome.ZeroBiomeManager biomes() {
+                                                      ^
+    符号:   类 ZeroBiomeManager
+    位置: 程序包 cn.ZeroEngine.Engine.api.v3.feature.biome
+  D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v3\feature\crop\ZeroCropListener.
+java:81: 错误: 找不到符号
+      private SCrop findMatureFallback(Block b) {
+              ^
+    符号:   类 SCrop
+    位置: 类 ZeroCropListener
+  D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v3\feature\crop\ZeroCropListener.
+java:161: 错误: 找不到符号
+      private void harvest(Block block, SCrop crop, Player p) {
+                                        ^
+    符号:   类 SCrop
+    位置: 类 ZeroCropListener
+  D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v3\feature\crop\ZeroCropManager.j
+ava:25: 错误: 找不到符号
+      private final Map<String, SCrop> registry = new HashMap<>();
+                                ^
+    符号:   类 SCrop
+    位置: 类 ZeroCropManager
+  D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v3\feature\crop\ZeroCropManager.j
+ava:92: 错误: 找不到符号
+      public ZeroCropManager register(SCrop crop) {
+                                      ^
+    符号:   类 SCrop
+    位置: 类 ZeroCropManager
+  D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v3\feature\crop\ZeroCropManager.j
+ava:102: 错误: 找不到符号
+      public boolean registerIfAbsent(SCrop crop) {
+                                      ^
+    符号:   类 SCrop
+    位置: 类 ZeroCropManager
+  D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v3\feature\crop\ZeroCropManager.j
+ava:112: 错误: 找不到符号
+      public SCrop get(String id) { return registry.get(id); }
+             ^
+    符号:   类 SCrop
+    位置: 类 ZeroCropManager
+  D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v3\feature\crop\ZeroCropManager.j
+ava:114: 错误: 找不到符号
+      public Collection<SCrop> all() { return Collections.unmodifiableCollection(registry.values()); }
+                        ^
+    符号:   类 SCrop
+    位置: 类 ZeroCropManager
+  D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v3\feature\crop\ZeroCropManager.j
+ava:116: 错误: 找不到符号
+      public SCrop findAt(Block block) {
+             ^
+    符号:   类 SCrop
+    位置: 类 ZeroCropManager
+  D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v3\feature\crop\ZeroCropManager.j
+ava:122: 错误: 找不到符号
+      public SCrop findFallback(Block block) {
+             ^
+    符号:   类 SCrop
+    位置: 类 ZeroCropManager
+  D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v3\feature\crop\ZeroCropManager.j
+ava:143: 错误: 找不到符号
+      public boolean placeAt(Block block, SCrop crop, int stage) {
+                                          ^
+    符号:   类 SCrop
+    位置: 类 ZeroCropManager
+  D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v3\feature\screen\ZeroScreenManag
+er.java:35: 错误: 找不到符号
+      private final java.util.Map<String, SScreen> screens = new ConcurrentHashMap<>();
+                                          ^
+    符号:   类 SScreen
+    位置: 类 ZeroScreenManager
+  D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v3\feature\screen\ZeroScreenManag
+er.java:47: 错误: 找不到符号
+      public ZeroScreenManager register(SScreen screen) {
+                                        ^
+    符号:   类 SScreen
+    位置: 类 ZeroScreenManager
+  D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v3\feature\screen\ZeroScreenManag
+er.java:66: 错误: 找不到符号
+      public boolean registerIfAbsent(SScreen screen) {
+                                      ^
+    符号:   类 SScreen
+    位置: 类 ZeroScreenManager
+  D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v3\feature\screen\ZeroScreenManag
+er.java:110: 错误: 找不到符号
+      private void wireTriggerEvent(SScreen screen, Class<? extends Event> evt) {
+                                    ^
+    符号:   类 SScreen
+    位置: 类 ZeroScreenManager
+  D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v3\feature\screen\ZeroScreenManag
+er.java:138: 错误: 找不到符号
+      private void wireTriggerCommand(SScreen screen, String cmd) {
+                                      ^
+    符号:   类 SScreen
+    位置: 类 ZeroScreenManager
+  D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v3\feature\screen\ZeroScreenManag
+er.java:157: 错误: 找不到符号
+      public SScreen get(String id) { return screens.get(id); }
+             ^
+    符号:   类 SScreen
+    位置: 类 ZeroScreenManager
+  D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v3\feature\screen\ZeroScreenManag
+er.java:159: 错误: 找不到符号
+      public java.util.Collection<SScreen> all() { return java.util.Collections.unmodifiableCollection(screens.values()
+); }
+                                  ^
+    符号:   类 SScreen
+    位置: 类 ZeroScreenManager
+  D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v3\feature\screen\ZeroScreenManag
+er.java:290: 错误: 找不到符号
+          final SScreen screen;
+                ^
+    符号:   类 SScreen
+    位置: 类 Pending
+  D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v3\feature\screen\ZeroScreenManag
+er.java:292: 错误: 找不到符号
+          Pending(SScreen screen, CompletableFuture<Boolean> future) {
+                  ^
+    符号:   类 SScreen
+    位置: 类 Pending
+  D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v3\feature\block\ZeroBlockListene
+r.java:48: 错误: 找不到符号
+      private final Map<Location, SBlock> redstoneDefs = new ConcurrentHashMap<>();
+                                  ^
+    符号:   类 SBlock
+    位置: 类 ZeroBlockListener
+  D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v3\feature\block\ZeroBlockListene
+r.java:129: 错误: 找不到符号
+      private void watchForRedstone(Block block, SBlock def) {
+                                                 ^
+    符号:   类 SBlock
+    位置: 类 ZeroBlockListener
+  D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v3\feature\block\ZeroBlockManager
+.java:26: 错误: 找不到符号
+      private final Map<String, SBlock> blocks = new HashMap<>();
+                                ^
+    符号:   类 SBlock
+    位置: 类 ZeroBlockManager
+  D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v3\feature\block\ZeroBlockManager
+.java:38: 错误: 找不到符号
+      public ZeroBlockManager register(SBlock block) {
+                                       ^
+    符号:   类 SBlock
+    位置: 类 ZeroBlockManager
+  D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v3\feature\block\ZeroBlockManager
+.java:52: 错误: 找不到符号
+      public boolean registerIfAbsent(SBlock block) {
+                                      ^
+    符号:   类 SBlock
+    位置: 类 ZeroBlockManager
+  D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v3\feature\block\ZeroBlockManager
+.java:62: 错误: 找不到符号
+      public ZeroBlockManager registerAll(SBlock... blocks) {
+                                          ^
+    符号:   类 SBlock
+    位置: 类 ZeroBlockManager
+  D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v3\feature\block\ZeroBlockManager
+.java:71: 错误: 找不到符号
+      public SBlock get(String id) { return blocks.get(id); }
+             ^
+    符号:   类 SBlock
+    位置: 类 ZeroBlockManager
+  D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v3\feature\block\ZeroBlockManager
+.java:73: 错误: 找不到符号
+      public Collection<SBlock> all() { return Collections.unmodifiableCollection(blocks.values()); }
+                        ^
+    符号:   类 SBlock
+    位置: 类 ZeroBlockManager
+  D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v3\feature\block\ZeroBlockManager
+.java:75: 错误: 找不到符号
+      public SBlock findItem(ItemStack item) {
+             ^
+    符号:   类 SBlock
+    位置: 类 ZeroBlockManager
+  D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v3\feature\block\ZeroBlockManager
+.java:83: 错误: 找不到符号
+      public SBlock findAt(Block block) {
+             ^
+    符号:   类 SBlock
+    位置: 类 ZeroBlockManager
+  D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v3\feature\block\ZeroBlockManager
+.java:92: 错误: 找不到符号
+      public void placeAt(Block block, SBlock blockDef) {
+                                       ^
+    符号:   类 SBlock
+    位置: 类 ZeroBlockManager
+  D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v3\feature\block\ZeroBlockManager
+.java:107: 错误: 找不到符号
+      public Set<java.util.Map.Entry<Block, SBlock>> scanPoweredAround(Block source, int radius) {
+                                            ^
+    符号:   类 SBlock
+    位置: 类 ZeroBlockManager
+  D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v3\feature\recipe\ZeroRecipeManag
+er.java:20: 错误: 找不到符号
+      private final Map<String, SRecipe> registry = new HashMap<>();
+                                ^
+    符号:   类 SRecipe
+    位置: 类 ZeroRecipeManager
+  D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v3\feature\recipe\ZeroRecipeManag
+er.java:22: 错误: 找不到符号
+      private final Map<String, AdvancedCraftTable> tables = new HashMap<>();
+                                ^
+    符号:   类 AdvancedCraftTable
+    位置: 类 ZeroRecipeManager
+  D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v3\feature\recipe\ZeroRecipeManag
+er.java:23: 错误: 找不到符号
+      private final Map<Material, AdvancedCraftTable> defaultByMaterial = new ConcurrentHashMap<>();
+                                  ^
+    符号:   类 AdvancedCraftTable
+    位置: 类 ZeroRecipeManager
+  D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v3\feature\recipe\ZeroRecipeManag
+er.java:29: 错误: 找不到符号
+      public boolean register(SRecipe r) {
+                              ^
+    符号:   类 SRecipe
+    位置: 类 ZeroRecipeManager
+  D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v3\feature\recipe\ZeroRecipeManag
+er.java:57: 错误: 找不到符号
+      public ZeroRecipeManager registerAll(SRecipe... recipes) {
+                                           ^
+    符号:   类 SRecipe
+    位置: 类 ZeroRecipeManager
+  D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v3\feature\recipe\ZeroRecipeManag
+er.java:65: 错误: 找不到符号
+      public SRecipe get(String id) { return registry.get(id); }
+             ^
+    符号:   类 SRecipe
+    位置: 类 ZeroRecipeManager
+  D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v3\feature\recipe\ZeroRecipeManag
+er.java:67: 错误: 找不到符号
+      public Collection<SRecipe> all() { return Collections.unmodifiableCollection(registry.values()); }
+                        ^
+    符号:   类 SRecipe
+    位置: 类 ZeroRecipeManager
+  D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v3\feature\recipe\ZeroRecipeManag
+er.java:71: 错误: 找不到符号
+      public AdvancedCraftTable registerTable(AdvancedCraftTable table) {
+                                              ^
+    符号:   类 AdvancedCraftTable
+    位置: 类 ZeroRecipeManager
+  注: 有关详细信息, 请使用 -Xlint:unchecked 重新编译。
+  注: 某些输入文件使用或覆盖了已过时的 API。
+  D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\Engine\api\v2\feature\enchant\SEnchantment.java:62: 警告: [removal] O
+ldEnum 中的 name() 已过时, 且标记为待删除
+                  sf.info("[Enchant] Attribute resolved: '" + name + "' -> '" + matched + "' (" + result.name() + ")");
+                                                                                                        ^
+  D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\Engine\api\v2\feature\enchant\SFAttr.java:120: 警告: [removal] Attrib
+ute 中的 values() 已过时, 且标记为待删除
+              Attribute[] values = Attribute.values();
+                                            ^
+  D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\Engine\api\v2\feature\enchant\SFAttr.java:121: 警告: [removal] OldEnu
+m 中的 name() 已过时, 且标记为待删除
+              for (Attribute a : values) REGISTRY.put(a.name(), a);
+                                                       ^
+  D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\Engine\api\v2\feature\item\SItem.java:32: 警告: [removal] OldEnum 中的 
+name() 已过时, 且标记为待删除
+                  sf.info("[Item] Attribute lookup: '" + name + "' -> matched '" + a.name() + "'");
+                                                                                    ^
+  D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\Engine\api\v2\feature\item\SItem.java:87: 警告: [removal] AttributeMo
+difier 中的 AttributeModifier(@org.jetbrains.annotations.NotNull UUID,@org.jetbrains.annotations.NotNull String,double,@o
+rg.jetbrains.annotations.NotNull Operation,@org.jetbrains.annotations.Nullable EquipmentSlot) 已过时, 且标记为待删除
+                  meta.addAttributeModifier(attr, new AttributeModifier(
+                                                  ^
+  D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\Engine\api\v2\feature\item\SItem.java:150: 警告: [removal] AttributeM
+odifier 中的 AttributeModifier(@org.jetbrains.annotations.NotNull UUID,@org.jetbrains.annotations.NotNull String,double,@
+org.jetbrains.annotations.NotNull Operation,@org.jetbrains.annotations.Nullable EquipmentSlot) 已过时, 且标记为待删除
+                      meta.addAttributeModifier(attr, new AttributeModifier(
+                                                      ^
+  D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v2\feature\world\ZeroWorldManager
+.java:58: 警告: [removal] GameRule 中的 DO_DAYLIGHT_CYCLE 已过时, 且标记为待删除
+          world.setGameRule(org.bukkit.GameRule.DO_DAYLIGHT_CYCLE, false);
+                                               ^
+  D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v2\feature\world\ZeroWorldManager
+.java:62: 警告: [removal] GameRule 中的 DO_DAYLIGHT_CYCLE 已过时, 且标记为待删除
+          world.setGameRule(org.bukkit.GameRule.DO_DAYLIGHT_CYCLE, true);
+                                               ^
+  D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v2\feature\world\ZeroWorldManager
+.java:90: 警告: [removal] WorldBorder 中的 setSize(double,long) 已过时, 且标记为待删除
+          border.setSize(size, seconds);
+                ^
+  D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v2\feature\world\ZeroWorldManager
+.java:103: 警告: [removal] GameRule 中的 DO_MOB_SPAWNING 已过时, 且标记为待删除
+          world.setGameRule(org.bukkit.GameRule.DO_MOB_SPAWNING, spawn);
+                                               ^
+  D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v2\feature\world\ZeroWorldManager
+.java:107: 警告: [removal] GameRule 中的 DO_FIRE_TICK 已过时, 且标记为待删除
+          world.setGameRule(org.bukkit.GameRule.DO_FIRE_TICK, spread);
+                                               ^
+  D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v2\feature\world\ZeroWorldManager
+.java:119: 警告: [removal] GameRule 中的 DO_FIRE_TICK 已过时, 且标记为待删除
+                  world.getGameRuleValue(org.bukkit.GameRule.DO_FIRE_TICK),
+                                                            ^
+  D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v2\feature\world\ZeroWorldManager
+.java:120: 警告: [removal] GameRule 中的 DO_MOB_SPAWNING 已过时, 且标记为待删除
+                  world.getGameRuleValue(org.bukkit.GameRule.DO_MOB_SPAWNING)
+                                                            ^
+  D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v2\feature\world\ZeroWorldManager
+.java:133: 警告: [removal] GameRule 中的 DO_FIRE_TICK 已过时, 且标记为待删除
+          world.setGameRule(org.bukkit.GameRule.DO_FIRE_TICK, p.fireSpread);
+                                               ^
+  D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v2\feature\world\ZeroWorldManager
+.java:134: 警告: [removal] GameRule 中的 DO_MOB_SPAWNING 已过时, 且标记为待删除
+          world.setGameRule(org.bukkit.GameRule.DO_MOB_SPAWNING, p.mobSpawning);
+                                               ^
+  D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\Engine\api\v3\feature\item\SItem.java:45: 警告: [removal] OldEnum 中的 
+name() 已过时, 且标记为待删除
+                  sf.info("[Item] Attribute lookup: '" + name + "' -> matched '" + a.name() + "'");
+                                                                                    ^
+  D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\Engine\api\v3\feature\item\SItem.java:112: 警告: [removal] AttributeM
+odifier 中的 AttributeModifier(@org.jetbrains.annotations.NotNull UUID,@org.jetbrains.annotations.NotNull String,double,@
+org.jetbrains.annotations.NotNull Operation,@org.jetbrains.annotations.Nullable EquipmentSlot) 已过时, 且标记为待删除
+                  meta.addAttributeModifier(attr, new AttributeModifier(
+                                                  ^
+  D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\Engine\api\v3\feature\item\SItem.java:240: 警告: [removal] AttributeM
+odifier 中的 AttributeModifier(@org.jetbrains.annotations.NotNull UUID,@org.jetbrains.annotations.NotNull String,double,@
+org.jetbrains.annotations.NotNull Operation,@org.jetbrains.annotations.Nullable EquipmentSlot) 已过时, 且标记为待删除
+                      meta.addAttributeModifier(attr, new AttributeModifier(
+                                                      ^
+  D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\Engine\api\v3\feature\enchant\SEnchantment.java:62: 警告: [removal] O
+ldEnum 中的 name() 已过时, 且标记为待删除
+                  sf.info("[Enchant] Attribute resolved: '" + name + "' -> '" + matched + "' (" + result.name() + ")");
+                                                                                                        ^
+  D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\Engine\api\v3\feature\enchant\SFAttr.java:137: 警告: [removal] Attrib
+ute 中的 values() 已过时, 且标记为待删除
+                  Attribute[] values = Attribute.values();
+                                                ^
+  D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\Engine\api\v3\feature\enchant\SFAttr.java:153: 警告: [removal] OldEnu
+m 中的 name() 已过时, 且标记为待删除
+          try { sources[0] = a.name(); } catch (Throwable ignore) { sources[0] = null; }
+                              ^
+  D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\Engine\api\v3\feature\recipe\SRecipe.java:57: 警告: [removal] ExactCh
+oice 中的 ExactChoice(List<ItemStack>) 已过时, 且标记为待删除
+              return new RecipeChoice.ExactChoice(Collections.singletonList(exact));
+                     ^
+  D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\Engine\api\v3\main\SFCommandOps.java:59: 警告: [removal] org.bukkit.p
+lugin 中的 SimplePluginManager 已过时, 且标记为待删除
+              if (Bukkit.getPluginManager() instanceof SimplePluginManager spm) {
+                                                       ^
+  D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\Engine\api\v3\main\SFCommandOps.java:60: 警告: [removal] org.bukkit.p
+lugin 中的 SimplePluginManager 已过时, 且标记为待删除
+                  java.lang.reflect.Field fCmdMap = SimplePluginManager.class.getDeclaredField("commandMap");
+                                                    ^
+  D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v3\feature\world\ZeroWorldManager
+.java:58: 警告: [removal] GameRule 中的 DO_DAYLIGHT_CYCLE 已过时, 且标记为待删除
+          world.setGameRule(org.bukkit.GameRule.DO_DAYLIGHT_CYCLE, false);
+                                               ^
+  D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v3\feature\world\ZeroWorldManager
+.java:62: 警告: [removal] GameRule 中的 DO_DAYLIGHT_CYCLE 已过时, 且标记为待删除
+          world.setGameRule(org.bukkit.GameRule.DO_DAYLIGHT_CYCLE, true);
+                                               ^
+  D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v3\feature\world\ZeroWorldManager
+.java:90: 警告: [removal] WorldBorder 中的 setSize(double,long) 已过时, 且标记为待删除
+          border.setSize(size, seconds);
+                ^
+  D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v3\feature\world\ZeroWorldManager
+.java:103: 警告: [removal] GameRule 中的 DO_MOB_SPAWNING 已过时, 且标记为待删除
+          world.setGameRule(org.bukkit.GameRule.DO_MOB_SPAWNING, spawn);
+                                               ^
+  D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v3\feature\world\ZeroWorldManager
+.java:107: 警告: [removal] GameRule 中的 DO_FIRE_TICK 已过时, 且标记为待删除
+          world.setGameRule(org.bukkit.GameRule.DO_FIRE_TICK, spread);
+                                               ^
+  D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v3\feature\world\ZeroWorldManager
+.java:119: 警告: [removal] GameRule 中的 DO_FIRE_TICK 已过时, 且标记为待删除
+                  world.getGameRuleValue(org.bukkit.GameRule.DO_FIRE_TICK),
+                                                            ^
+  D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v3\feature\world\ZeroWorldManager
+.java:120: 警告: [removal] GameRule 中的 DO_MOB_SPAWNING 已过时, 且标记为待删除
+                  world.getGameRuleValue(org.bukkit.GameRule.DO_MOB_SPAWNING)
+                                                            ^
+  D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v3\feature\world\ZeroWorldManager
+.java:133: 警告: [removal] GameRule 中的 DO_FIRE_TICK 已过时, 且标记为待删除
+          world.setGameRule(org.bukkit.GameRule.DO_FIRE_TICK, p.fireSpread);
+                                               ^
+  D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v3\feature\world\ZeroWorldManager
+.java:134: 警告: [removal] GameRule 中的 DO_MOB_SPAWNING 已过时, 且标记为待删除
+          world.setGameRule(org.bukkit.GameRule.DO_MOB_SPAWNING, p.mobSpawning);
+                                               ^
+  D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v3\feature\enchant\ZeroEnchantAtt
+ributeListener.java:111: 警告: [removal] AttributeInstance 中的 getModifier(@org.jetbrains.annotations.NotNull UUID) 已过时, 且
+标记为待删除
+                  if (inst.getModifier(modId) != null) continue;
+                          ^
+  D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v3\feature\item\ZeroItemListener.
+java:217: 警告: [removal] AttributeInstance 中的 getModifier(@org.jetbrains.annotations.NotNull UUID) 已过时, 且标记为待删除
+                  if (inst.getModifier(modId) != null) continue;
+                          ^
+  D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v3\feature\item\ZeroItemListener.
+java:234: 警告: [removal] AttributeInstance 中的 getModifier(@org.jetbrains.annotations.NotNull UUID) 已过时, 且标记为待删除
+                  org.bukkit.attribute.AttributeModifier m = inst.getModifier(modId);
+                                                                 ^
+  D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v3\feature\main\ZeroReachManager.
+java:76: 警告: [removal] AttributeInstance 中的 getModifier(@org.jetbrains.annotations.NotNull UUID) 已过时, 且标记为待删除
+          AttributeModifier existing = inst.getModifier(BLOCK_MOD);
+                                           ^
+  D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v3\feature\main\ZeroReachManager.
+java:78: 警告: [removal] AttributeModifier 中的 AttributeModifier(@org.jetbrains.annotations.NotNull UUID,@org.jetbrains.an
+notations.NotNull String,double,@org.jetbrains.annotations.NotNull Operation) 已过时, 且标记为待删除
+          inst.addModifier(new AttributeModifier(BLOCK_MOD, "sf_reach_block",
+                           ^
+  D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v3\feature\main\ZeroReachManager.
+java:86: 警告: [removal] AttributeInstance 中的 getModifier(@org.jetbrains.annotations.NotNull UUID) 已过时, 且标记为待删除
+          AttributeModifier existing = inst.getModifier(ENTITY_MOD);
+                                           ^
+  D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v3\feature\main\ZeroReachManager.
+java:88: 警告: [removal] AttributeModifier 中的 AttributeModifier(@org.jetbrains.annotations.NotNull UUID,@org.jetbrains.an
+notations.NotNull String,double,@org.jetbrains.annotations.NotNull Operation) 已过时, 且标记为待删除
+          inst.addModifier(new AttributeModifier(ENTITY_MOD, "sf_reach_entity",
+                           ^
+  D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v3\feature\main\ZeroReachManager.
+java:96: 警告: [removal] AttributeInstance 中的 getModifier(@org.jetbrains.annotations.NotNull UUID) 已过时, 且标记为待删除
+          AttributeModifier m = inst.getModifier(BLOCK_MOD);
+                                    ^
+  D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v3\feature\main\ZeroReachManager.
+java:104: 警告: [removal] AttributeInstance 中的 getModifier(@org.jetbrains.annotations.NotNull UUID) 已过时, 且标记为待删除
+          AttributeModifier m = inst.getModifier(ENTITY_MOD);
+                                    ^
+  D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v3\feature\main\ZeroReachManager.
+java:113: 警告: [removal] AttributeInstance 中的 getModifier(@org.jetbrains.annotations.NotNull UUID) 已过时, 且标记为待删除
+          AttributeModifier m = inst.getModifier(BLOCK_MOD);
+                                    ^
+  D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v3\feature\main\ZeroReachManager.
+java:122: 警告: [removal] AttributeInstance 中的 getModifier(@org.jetbrains.annotations.NotNull UUID) 已过时, 且标记为待删除
+          AttributeModifier m = inst.getModifier(ENTITY_MOD);
+                                    ^
+  D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v2\feature\enchant\ZeroEnchantAnv
+ilListener.java:64: 警告: [removal] AnvilInventory 中的 getRepairCost() 已过时, 且标记为待删除
+              inv.setRepairCost(Math.max(inv.getRepairCost(), totalCost));
+                                            ^
+  D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v2\feature\enchant\ZeroEnchantAnv
+ilListener.java:64: 警告: [removal] AnvilInventory 中的 setRepairCost(int) 已过时, 且标记为待删除
+              inv.setRepairCost(Math.max(inv.getRepairCost(), totalCost));
+                 ^
+  D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v2\feature\enchant\ZeroEnchantAtt
+ributeListener.java:111: 警告: [removal] AttributeInstance 中的 getModifier(@org.jetbrains.annotations.NotNull UUID) 已过时, 且
+标记为待删除
+                  if (inst.getModifier(modId) != null) continue;
+                          ^
+  D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v2\feature\item\ZeroItemListener.
+java:102: 警告: [removal] AttributeInstance 中的 getModifier(@org.jetbrains.annotations.NotNull UUID) 已过时, 且标记为待删除
+                  if (inst.getModifier(modId) != null) continue;
+                          ^
+  D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v2\feature\item\ZeroItemListener.
+java:119: 警告: [removal] AttributeInstance 中的 getModifier(@org.jetbrains.annotations.NotNull UUID) 已过时, 且标记为待删除
+                  org.bukkit.attribute.AttributeModifier m = inst.getModifier(modId);
+                                                                 ^
+  D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v2\feature\main\ZeroReachManager.
+java:76: 警告: [removal] AttributeInstance 中的 getModifier(@org.jetbrains.annotations.NotNull UUID) 已过时, 且标记为待删除
+          AttributeModifier existing = inst.getModifier(BLOCK_MOD);
+                                           ^
+  D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v2\feature\main\ZeroReachManager.
+java:78: 警告: [removal] AttributeModifier 中的 AttributeModifier(@org.jetbrains.annotations.NotNull UUID,@org.jetbrains.an
+notations.NotNull String,double,@org.jetbrains.annotations.NotNull Operation) 已过时, 且标记为待删除
+          inst.addModifier(new AttributeModifier(BLOCK_MOD, "sf_reach_block",
+                           ^
+  D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v2\feature\main\ZeroReachManager.
+java:86: 警告: [removal] AttributeInstance 中的 getModifier(@org.jetbrains.annotations.NotNull UUID) 已过时, 且标记为待删除
+          AttributeModifier existing = inst.getModifier(ENTITY_MOD);
+                                           ^
+  D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v2\feature\main\ZeroReachManager.
+java:88: 警告: [removal] AttributeModifier 中的 AttributeModifier(@org.jetbrains.annotations.NotNull UUID,@org.jetbrains.an
+notations.NotNull String,double,@org.jetbrains.annotations.NotNull Operation) 已过时, 且标记为待删除
+          inst.addModifier(new AttributeModifier(ENTITY_MOD, "sf_reach_entity",
+                           ^
+  D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v2\feature\main\ZeroReachManager.
+java:96: 警告: [removal] AttributeInstance 中的 getModifier(@org.jetbrains.annotations.NotNull UUID) 已过时, 且标记为待删除
+          AttributeModifier m = inst.getModifier(BLOCK_MOD);
+                                    ^
+  D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v2\feature\main\ZeroReachManager.
+java:104: 警告: [removal] AttributeInstance 中的 getModifier(@org.jetbrains.annotations.NotNull UUID) 已过时, 且标记为待删除
+          AttributeModifier m = inst.getModifier(ENTITY_MOD);
+                                    ^
+  D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v2\feature\main\ZeroReachManager.
+java:113: 警告: [removal] AttributeInstance 中的 getModifier(@org.jetbrains.annotations.NotNull UUID) 已过时, 且标记为待删除
+          AttributeModifier m = inst.getModifier(BLOCK_MOD);
+                                    ^
+  D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v2\feature\main\ZeroReachManager.
+java:122: 警告: [removal] AttributeInstance 中的 getModifier(@org.jetbrains.annotations.NotNull UUID) 已过时, 且标记为待删除
+          AttributeModifier m = inst.getModifier(ENTITY_MOD);
+                                    ^
+  D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v2\feature\engine\ZeroMonsterAttr
+ibuteImpl.java:70: 警告: [removal] Attribute 中的 values() 已过时, 且标记为待删除
+          for (Attribute attr : Attribute.values()) {
+                                         ^
+  D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v2\feature\engine\ZeroMonsterAttr
+ibuteImpl.java:115: 警告: [removal] AttributeModifier 中的 AttributeModifier(@org.jetbrains.annotations.NotNull UUID,@org.j
+etbrains.annotations.NotNull String,double,@org.jetbrains.annotations.NotNull Operation) 已过时, 且标记为待删除
+              inst.addModifier(new AttributeModifier(
+                               ^
+  D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v2\feature\world\ZeroWorldCommand
+.java:161: 警告: [removal] GameRule 中的 DO_MOB_SPAWNING 已过时, 且标记为待删除
+                  w.getGameRuleValue(org.bukkit.GameRule.DO_MOB_SPAWNING);
+                                                        ^
+  D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v2\feature\world\ZeroWorldCommand
+.java:169: 警告: [removal] GameRule 中的 DO_FIRE_TICK 已过时, 且标记为待删除
+                  w.getGameRuleValue(org.bukkit.GameRule.DO_FIRE_TICK);
+                                                        ^
+  D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v2\feature\world\ZeroWorldCommand
+.java:214: 警告: [removal] GameRule 中的 DO_MOB_SPAWNING 已过时, 且标记为待删除
+          sf.msg(s, ChatColor.YELLOW + "生物生成: " + (w.getGameRuleValue(org.bukkit.GameRule.DO_MOB_SPAWNING) ? ChatColor.
+GREEN + "开" : ChatColor.RED + "关"));
+                                                                                         ^
+  D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v2\feature\world\ZeroWorldCommand
+.java:215: 警告: [removal] GameRule 中的 DO_FIRE_TICK 已过时, 且标记为待删除
+          sf.msg(s, ChatColor.YELLOW + "火焰蔓延: " + (w.getGameRuleValue(org.bukkit.GameRule.DO_FIRE_TICK) ? ChatColor.GRE
+EN + "开" : ChatColor.RED + "关"));
+                                                                                         ^
+  D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v3\feature\enchant\ZeroEnchantAnv
+ilListener.java:105: 警告: [removal] AnvilInventory 中的 getRepairCost() 已过时, 且标记为待删除
+                      inv.setRepairCost(Math.max(inv.getRepairCost(), extraCost));
+                                                    ^
+  D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v3\feature\enchant\ZeroEnchantAnv
+ilListener.java:105: 警告: [removal] AnvilInventory 中的 setRepairCost(int) 已过时, 且标记为待删除
+                      inv.setRepairCost(Math.max(inv.getRepairCost(), extraCost));
+                         ^
+  D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v3\feature\enchant\ZeroEnchantAnv
+ilListener.java:109: 警告: [removal] AnvilInventory 中的 getRepairCost() 已过时, 且标记为待删除
+                      try { inv.setRepairCost(Math.max(inv.getRepairCost(), extraCost)); } catch (Throwable ignore) {}
+                                                          ^
+  D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v3\feature\enchant\ZeroEnchantAnv
+ilListener.java:109: 警告: [removal] AnvilInventory 中的 setRepairCost(int) 已过时, 且标记为待删除
+                      try { inv.setRepairCost(Math.max(inv.getRepairCost(), extraCost)); } catch (Throwable ignore) {}
+                               ^
+  D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v3\feature\engine\ZeroMonsterAttr
+ibuteImpl.java:70: 警告: [removal] Attribute 中的 values() 已过时, 且标记为待删除
+          for (Attribute attr : Attribute.values()) {
+                                         ^
+  D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v3\feature\engine\ZeroMonsterAttr
+ibuteImpl.java:115: 警告: [removal] AttributeModifier 中的 AttributeModifier(@org.jetbrains.annotations.NotNull UUID,@org.j
+etbrains.annotations.NotNull String,double,@org.jetbrains.annotations.NotNull Operation) 已过时, 且标记为待删除
+              inst.addModifier(new AttributeModifier(
+                               ^
+  D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v3\feature\world\ZeroWorldCommand
+.java:161: 警告: [removal] GameRule 中的 DO_MOB_SPAWNING 已过时, 且标记为待删除
+1 actionable task: 1 executed
+                  w.getGameRuleValue(org.bukkit.GameRule.DO_MOB_SPAWNING);
+                                                        ^
+  D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v3\feature\world\ZeroWorldCommand
+.java:169: 警告: [removal] GameRule 中的 DO_FIRE_TICK 已过时, 且标记为待删除
+                  w.getGameRuleValue(org.bukkit.GameRule.DO_FIRE_TICK);
+                                                        ^
+  D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v3\feature\world\ZeroWorldCommand
+.java:214: 警告: [removal] GameRule 中的 DO_MOB_SPAWNING 已过时, 且标记为待删除
+          sf.msg(s, ChatColor.YELLOW + "生物生成: " + (w.getGameRuleValue(org.bukkit.GameRule.DO_MOB_SPAWNING) ? ChatColor.
+GREEN + "开" : ChatColor.RED + "关"));
+                                                                                         ^
+  D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v3\feature\world\ZeroWorldCommand
+.java:215: 警告: [removal] GameRule 中的 DO_FIRE_TICK 已过时, 且标记为待删除
+          sf.msg(s, ChatColor.YELLOW + "火焰蔓延: " + (w.getGameRuleValue(org.bukkit.GameRule.DO_FIRE_TICK) ? ChatColor.GRE
+EN + "开" : ChatColor.RED + "关"));
+                                                                                         ^
+  D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v3\ZeroSF.java:68: 错误: 找不到符号
+  public final class ZeroSF implements SFApi {
+                                       ^
+    符号: 类 SFApi
+  注: 某些输入文件使用了未经检查或不安全的操作。
+  D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\Engine\api\v2\feature\chat\ChatHandler.java:19: 错误: 程序包ZeroChatMana
+ger不存在
+          ZeroChatManager.ChatChannel channel();
+                         ^
+  D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\Engine\api\v2\feature\chat\ChatHandler.java:20: 错误: 程序包ZeroChatMana
+ger不存在
+          void channel(ZeroChatManager.ChatChannel channel);
+                                      ^
+  D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v2\feature\chat\ZeroChatManager.j
+ava:231: 错误: 程序包ChatHandler不存在
+      static final class ChatContextImpl implements ChatHandler.ChatContext {
+                                                               ^
+  D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\Engine\api\v3\feature\chat\ChatHandler.java:19: 错误: 程序包ZeroChatMana
+ger不存在
+          ZeroChatManager.ChatChannel channel();
+                         ^
+  D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\Engine\api\v3\feature\chat\ChatHandler.java:20: 错误: 程序包ZeroChatMana
+ger不存在
+          void channel(ZeroChatManager.ChatChannel channel);
+                                      ^
+  D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v3\feature\chat\ZeroChatManager.j
+ava:231: 错误: 程序包ChatHandler不存在
+      static final class ChatContextImpl implements ChatHandler.ChatContext {
+                                                               ^
+  D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v1\Zeromain.java:2: 错误: 程序包cn.Zer
+oEngine.EngineLibraries.ZApi不存在
+  import cn.ZeroEngine.EngineLibraries.ZApi.EngineDisableDoneEvent;
+                                           ^
+  D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v1\Zeromain.java:3: 错误: 程序包cn.Zer
+oEngine.EngineLibraries.ZApi不存在
+  import cn.ZeroEngine.EngineLibraries.ZApi.EngineLoadDoneEvent;
+                                           ^
+  D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v1\Zeromain.java:16: 错误: 程序包cn.Ze
+roEngine.EngineLibraries.ZeroServer.Engine.v3.feature.Zeromain不存在
+  import cn.ZeroEngine.EngineLibraries.ZeroServer.Engine.v3.feature.Zeromain.ZeroReachCommand;
+                                                                            ^
+  D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v3\ZeroSF.java:21: 错误: 程序包cn.Zero
+Engine.EngineLibraries.ZeroServer.Engine.v3.feature.gui.impl不存在
+  import cn.ZeroEngine.EngineLibraries.ZeroServer.Engine.v3.feature.gui.impl.ZeroGUIManagerImpl;
+                                                                            ^
+  D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v3\ZeroSF.java:31: 错误: 程序包cn.Zero
+Engine.EngineLibraries.ZeroServer.Engine.v3.feature.gameplay.bedwars.impl不存在
+  import cn.ZeroEngine.EngineLibraries.ZeroServer.Engine.v3.feature.gameplay.bedwars.impl.ZeroBedwarsImpl;
+                                                                                         ^
+  D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v3\ZeroSF.java:33: 错误: 程序包cn.Zero
+Engine.EngineLibraries.ZeroServer.Engine.v3.feature.gameplay.horde.impl不存在
+  import cn.ZeroEngine.EngineLibraries.ZeroServer.Engine.v3.feature.gameplay.horde.impl.ZeroHordeImpl;
+                                                                                       ^
+  D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v3\ZeroSF.java:35: 错误: 程序包cn.Zero
+Engine.EngineLibraries.ZeroServer.Engine.v3.feature.gameplay.pvp.impl不存在
+  import cn.ZeroEngine.EngineLibraries.ZeroServer.Engine.v3.feature.gameplay.pvp.impl.ZeroPvPArenaImpl;
+                                                                                     ^
+  D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v3\ZeroSF.java:37: 错误: 程序包cn.Zero
+Engine.EngineLibraries.ZeroServer.Engine.v3.feature.gameplay.village.impl不存在
+  import cn.ZeroEngine.EngineLibraries.ZeroServer.Engine.v3.feature.gameplay.village.impl.ZeroVillageDefenseImpl;
+                                                                                         ^
+  D:\素材\mods\ZeroEngine\src\main\java\cn\ZeroEngine\EngineLibraries\ZeroServer\Engine\v3\feature\item\ZeroType.java:6: 
+错误: 类 DropSource 是公共的, 应在名为 DropSource.java 的文件中声明
+  public final class DropSource {
+               ^
+  100 个错误
+  73 个警告
+
+* Try:
+> Check your code and dependencies to fix the compilation error(s)
+> Run with --scan to get full insights from a Build Scan (powered by Develocity).
+
+BUILD FAILED in 7s

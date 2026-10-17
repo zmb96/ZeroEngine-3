@@ -9,7 +9,7 @@ import org.bukkit.inventory.meta.ItemMeta;
 import org.bukkit.persistence.PersistentDataContainer;
 import org.bukkit.persistence.PersistentDataType;
 import org.bukkit.plugin.Plugin;
-import cn.ZeroEngine.Engine.api.v3.SF;
+import cn.ZeroEngine.EngineLibraries.ZeroServer.Engine.v3.ZeroSF;
 
 import java.lang.reflect.Field;
 import java.util.*;
@@ -59,7 +59,7 @@ public abstract class SEnchantment {
         }
 
         if (plugin != null) {
-            SF sf = SF.sf();
+            ZeroSF sf = ZeroSF.sf();
             if (result != null) {
                 sf.info("[Enchant] Attribute resolved: '" + name + "' -> '" + matched + "' (" + result.name() + ")");
             } else {

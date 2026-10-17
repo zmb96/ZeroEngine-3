@@ -8,7 +8,7 @@ import org.bukkit.inventory.RecipeChoice;
 import org.bukkit.inventory.ShapedRecipe;
 import org.bukkit.inventory.ShapelessRecipe;
 import org.bukkit.plugin.Plugin;
-import cn.ZeroEngine.Engine.api.v3.feature.item.ItemManager;
+import cn.ZeroEngine.EngineLibraries.ZeroServer.Engine.v3.feature.item.ZeroItemManager;
 import cn.ZeroEngine.Engine.api.v3.feature.item.SItem;
 
 import java.util.*;
@@ -109,7 +109,7 @@ public abstract class SRecipe {
                     sb.append("'").append(r.toString()).append("'");
                 }
                 sb.append("]");
-                cn.ZeroEngine.Engine.api.v3.SF.sf().warn("[Recipe] " + sb);
+                cn.ZeroEngine.EngineLibraries.ZeroServer.Engine.v3.ZeroSF.sf().warn("[Recipe] " + sb);
                 rows = padded;
             }
             ShapedRecipe recipe = new ShapedRecipe(key, out);
@@ -151,7 +151,7 @@ public abstract class SRecipe {
         }
     }
 
-    public MatchResult matchesGrid(ItemStack[] grid, ItemManager im) {
+    public MatchResult matchesGrid(ItemStack[] grid, ZeroItemManager im) {
         if (grid == null || grid.length < 9) return MatchResult.FAIL;
         ItemStack[] g = new ItemStack[9];
         for (int i = 0; i < 9; i++) g[i] = grid[i];
@@ -264,7 +264,7 @@ public abstract class SRecipe {
         }
     }
 
-    private boolean itemMatchesIngredient(ItemStack item, Object ingredient, ItemManager im) {
+    private boolean itemMatchesIngredient(ItemStack item, Object ingredient, ZeroItemManager im) {
         if (ingredient instanceof Material m) {
             return item.getType() == m;
         }

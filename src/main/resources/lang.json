@@ -1,25 +1,32 @@
-[
-  {
-    "info": [
-      {
-        "main-onEnable": {
-          "line38": "Starting cn.ZeroEngine.Engine.api.v1 (实际启动：v3.SF)",
-          "line42": "数据库状态: ",
-          "line87": "插件已加载",
-          "line88-1": "Economy ready: ", "line88-2": " (Essentials=", "line88-3": ", Vault=", "line88-4": ")"
-        },
-        "main-onDisable": {
-          "line97": "SF不存在，关闭插件",
-          "line101": "Unload cn.ZeroEngine.Engine.api.v1.main"
-        }
-      }
-    ],
-    "warn": [
-      {
-        "SF": {
-          "JsonWarn": "在使用之前请三思，本方法名随时可能改变！如果你执意要调用，那就import cn.ZeroEngine.EngineLibraries.json，里面的方法名你要自己看着理解，并且本方法返回为滚木"
-        }
-      }
-    ]
+{
+  "info": {
+    "main-onEnable": {
+      "line38": "Starting cn.ZeroEngine.Engine.api.v1 (实际启动：v3.SF)",
+      "line42": "数据库状态: ",
+      "line87": "插件已加载",
+      "line88-1": "Economy ready: ",
+      "line88-2": " (Essentials=",
+      "line88-3": ", Vault=",
+      "line88-4": ")"
+    },
+    "main-onDisable": {
+      "line97": "SF不存在，关闭插件",
+      "line101": "Unload cn.ZeroEngine.Engine.api.v1.main"
+    }
+  },
+  "main-play": {
+    "line1": "███████╗███████╗██████╗  ██████╗ ███████╗███╗   ██╗ ██████╗ ██╗███╗   ██╗███████╗",
+    "line2": "╚══███╔╝██╔════╝██╔══██╗██╔═══██╗██╔════╝████╗  ██║██╔════╝ ██║████╗  ██║██╔════╝",
+    "line3": "  ███╔╝ █████╗  ██████╔╝██║   ██║█████╗  ██╔██╗ ██║██║  ███╗██║██╔██╗ ██║█████╗",
+    "line4": " ███╔╝  ██╔══╝  ██╔══██╗██║   ██║██╔══╝  ██║╚██╗██║██║   ██║██║██║╚██╗██║██╔══╝",
+    "line5": "███████╗███████╗██║  ██║╚██████╔╝███████╗██║ ╚████║╚██████╔╝██║██║ ╚████║███████╗",
+    "line6": "╚══════╝╚══════╝╚═╝  ╚═╝ ╚═════╝ ╚══════╝╚═╝  ╚═══╝ ╚═════╝ ╚═╝╚═╝  ╚═══╝╚══════╝",
+    "line7": "                                                                  Art by ZeroCkate",
+    "line8": "                                                             Plugin by zmb96, ZeroCkate"
+  },
+  "warn": {
+    "SF": {
+      "JsonWarn": "在使用之前请三思，本方法名随时可能改变！如果你执意要调用，那就import cn.ZeroEngine.EngineLibraries.json，里面的方法名你要自己看着理解，并且本方法返回为滚木"
+    }
   }
-]
+}

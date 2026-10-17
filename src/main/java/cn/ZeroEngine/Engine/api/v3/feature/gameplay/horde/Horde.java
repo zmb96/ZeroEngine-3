@@ -162,11 +162,11 @@ public interface Horde {
     <T extends HordeEvent> void onEvent(Class<T> type, Consumer<T> listener);
 
     interface HordeEvent {
-        enum Type { PLAYER_JOIN, PLAYER_LEAVE, COUNTDOWN_START, PREPARE_START,
+        enum ZeroType { PLAYER_JOIN, PLAYER_LEAVE, COUNTDOWN_START, PREPARE_START,
             WAVE_START, WAVE_END, BOSS_WAVE_START, MOB_SPAWN, MOB_KILL,
             PLAYER_DOWN, PLAYER_REVIVE, PLAYER_DEATH, SURVIVOR_WIN,
             GAME_END, REWARD_GRANT, SCORE_CHANGE, ELITE_SPAWN, BOSS_SPAWN }
-        Type type();
+        ZeroType type();
         Game game();
         Player player();
         Object data();

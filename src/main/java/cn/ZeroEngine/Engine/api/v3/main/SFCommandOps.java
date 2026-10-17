@@ -13,6 +13,7 @@ import org.bukkit.plugin.java.JavaPlugin;
 import java.lang.reflect.Method;
 import java.util.Iterator;
 import java.util.Map;
+import cn.ZeroEngine.Engine.api.v3.main.SFCommandOps;
 
 public final class SFCommandOps {
 
@@ -46,7 +47,7 @@ public final class SFCommandOps {
         if (found instanceof PluginCommand pc) {
             pc.setExecutor(executor);
             if (executor instanceof TabCompleter tc) pc.setTabCompleter(tc);
-            plugin.getLogger().info("[SF regCommand] bound command /" + name
+            plugin.getLogger().info("[ZeroSF regCommand] bound command /" + name
                     + " via cross-plugin lookup (owner=" + pc.getPlugin().getName() + ")");
             return this;
         }

@@ -11,10 +11,11 @@ import org.bukkit.inventory.meta.ItemMeta;
 import org.bukkit.persistence.PersistentDataContainer;
 import org.bukkit.persistence.PersistentDataType;
 import org.bukkit.plugin.Plugin;
-import cn.ZeroEngine.Engine.api.v3.SF;
+import cn.ZeroEngine.EngineLibraries.ZeroServer.Engine.v3.ZeroSF;
 import cn.ZeroEngine.Engine.api.v3.feature.enchant.SFAttr;
 
 import java.util.*;
+import cn.ZeroEngine.EngineLibraries.ZeroServer.Engine.v3.feature.item.ZeroDropSource;
 
 public abstract class SItem {
 
@@ -42,7 +43,7 @@ public abstract class SItem {
         SFAttr.ensureLoaded();
         org.bukkit.attribute.Attribute a = SFAttr.get(name);
         if (plugin != null) {
-            SF sf = SF.sf();
+            ZeroSF sf = ZeroSF.sf();
             if (a != null) {
                 sf.info("[Item] Attribute lookup: '" + name + "' -> matched '" + a.name() + "'");
             } else {
@@ -68,7 +69,7 @@ public abstract class SItem {
 
     public List<ItemAttributeBonus> attributes() { return Collections.emptyList(); }
 
-    public List<DropSource> dropSources() { return Collections.emptyList(); }
+    public List<ZeroDropSource> dropSources() { return Collections.emptyList(); }
 
     public boolean onRightClick(PlayerInteractEvent e) { return false; }
 

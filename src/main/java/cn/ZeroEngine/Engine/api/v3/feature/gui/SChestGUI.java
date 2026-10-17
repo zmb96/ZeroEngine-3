@@ -48,7 +48,7 @@ public abstract class SChestGUI {
     public void onClose(Player player) {}
 
     public final void open(Player player) {
-        GUIManager gm = cn.ZeroEngine.Engine.api.v3.SF.sf().gui();
+        GUIManager gm = cn.ZeroEngine.EngineLibraries.ZeroServer.Engine.v3.ZeroSF.sf().gui();
         ChestGUI gui = gm.create(title(), size() / 9, readonly());
         build(new Builder(gui));
         gui.onOpen(this::onOpen);

@@ -1,4 +1,5 @@
 target/
+build/
 *.class
 
 *.jar
@@ -28,3 +29,23 @@ log.txt
 
 # SSH known_hosts leaked by PowerShell profile error
 *known_hosts*
+
+# Gradle wrapper cache / local state
+.gradle/
+!gradle/wrapper/gradle-wrapper.jar
+!gradle/wrapper/gradle-wrapper.properties
+
+# IDE
+.idea/
+*.iml
+*.iws
+*.ipr
+.vscode/
+
+# Local refactor scratch scripts / dumps (not library source)
+refactor_step*.ps1
+refactor_step*.py
+refactor_step*.txt
+bo*.txt
+refactor_plan.csv
+

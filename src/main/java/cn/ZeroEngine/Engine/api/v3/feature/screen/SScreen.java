@@ -126,7 +126,7 @@ public abstract class SScreen {
         return value.substring(idx + expected.length());
     }
 
-    void bind(String namespace, Plugin plugin) {
+    public void bind(String namespace, Plugin plugin) {
         this.namespace = namespace;
         this.plugin = plugin;
     }

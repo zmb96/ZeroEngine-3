@@ -233,11 +233,11 @@ public interface VillageDefense {
     <T extends VillageEvent> void onEvent(Class<T> type, Consumer<T> listener);
 
     interface VillageEvent {
-        enum Type { PLAYER_JOIN, PLAYER_LEAVE, COUNTDOWN_START, BUILD_START, WAVE_START, WAVE_END,
+        enum ZeroType { PLAYER_JOIN, PLAYER_LEAVE, COUNTDOWN_START, BUILD_START, WAVE_START, WAVE_END,
             BUILDING_BUILT, BUILDING_UPGRADED, BUILDING_DEMOLISHED, BUILDING_DAMAGED, BUILDING_DESTROYED,
             UNIT_SPAWNED, UNIT_KILLED, ENEMY_SPAWN, ENEMY_KILL, CORE_DAMAGED, CORE_DESTROYED,
             RESOURCE_GAIN, RESOURCE_SPEND, GAME_END, VICTORY, DEFEAT, REWARD_GRANT, SCORE_CHANGE }
-        Type type();
+        ZeroType type();
         Game game();
         Player player();
         Object data();

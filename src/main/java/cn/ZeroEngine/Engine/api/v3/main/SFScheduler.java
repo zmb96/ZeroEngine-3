@@ -2,6 +2,7 @@ package cn.ZeroEngine.Engine.api.v3.main;
 
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
+import cn.ZeroEngine.Engine.api.v3.main.SFScheduler;
 
 public final class SFScheduler {
 

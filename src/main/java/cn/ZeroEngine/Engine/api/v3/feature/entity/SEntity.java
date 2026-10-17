@@ -18,7 +18,7 @@ import org.bukkit.persistence.PersistentDataContainer;
 import org.bukkit.persistence.PersistentDataType;
 import org.bukkit.plugin.Plugin;
 
-import cn.ZeroEngine.Engine.api.v3.SF;
+import cn.ZeroEngine.EngineLibraries.ZeroServer.Engine.v3.ZeroSF;
 import cn.ZeroEngine.Engine.api.v3.feature.enchant.SFAttr;
 
 import java.util.*;
@@ -79,7 +79,7 @@ public abstract class SEntity {
             if (inst == null) return;
             inst.setBaseValue(value);
         } catch (Throwable t) {
-            SF.sf().warn("[Entity] set attribute failed: " + attrName + " on " + id(), t);
+            ZeroSF.sf().warn("[Entity] set attribute failed: " + attrName + " on " + id(), t);
         }
     }
 

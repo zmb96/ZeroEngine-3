@@ -126,8 +126,8 @@ public interface PvPArena {
     <T extends MatchEvent> void onEvent(Class<T> type, Consumer<T> listener);
 
     interface MatchEvent {
-        enum Type { JOIN, LEAVE, COUNTDOWN_START, START, KILL, DEATH, ROUND_END, MATCH_END, KIT_CHANGE, ELO_CHANGE }
-        Type type();
+        enum ZeroType { JOIN, LEAVE, COUNTDOWN_START, START, KILL, DEATH, ROUND_END, MATCH_END, KIT_CHANGE, ELO_CHANGE }
+        ZeroType type();
         Match match();
         Player player();
         Object data();

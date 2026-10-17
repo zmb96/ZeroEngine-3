@@ -1,6 +1,7 @@
 package cn.ZeroEngine.Engine.api.v3.feature.tick;
 
-import cn.ZeroEngine.Engine.api.v3.SF;
+import cn.ZeroEngine.EngineLibraries.ZeroServer.Engine.v3.ZeroSF;
+import cn.ZeroEngine.EngineLibraries.ZeroServer.Engine.v3.feature.tick.ZeroTickManager;
 
 public abstract class STick {
 
@@ -40,9 +41,9 @@ public abstract class STick {
 
     private void start(long delay, long period, boolean repeat) {
         cancel();
-        SF sf = SF.sf();
+        ZeroSF sf = ZeroSF.sf();
         if (sf == null) return;
-        TickManager tm = sf.tick();
+        ZeroTickManager tm = sf.tick();
         if (tm == null) return;
 
         if (sync) {
@@ -65,16 +66,16 @@ public abstract class STick {
         try {
             onCode(tick);
         } catch (Throwable t) {
-            SF sf = SF.sf();
+            ZeroSF sf = ZeroSF.sf();
             if (sf != null) sf.error("[STick] error at sfTick=" + tick, t);
         }
     }
 
     public void cancel() {
         if (taskId != -1) {
-            SF sf = SF.sf();
+            ZeroSF sf = ZeroSF.sf();
             if (sf != null) {
-                TickManager tm = sf.tick();
+                ZeroTickManager tm = sf.tick();
                 if (tm != null) tm.cancel(taskId);
             }
             taskId = -1;

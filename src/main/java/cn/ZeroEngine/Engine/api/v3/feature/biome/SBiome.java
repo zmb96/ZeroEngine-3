@@ -1,6 +1,6 @@
 package cn.ZeroEngine.Engine.api.v3.feature.biome;
 
-import cn.ZeroEngine.Engine.api.v3.main.PerlinNoise;
+import cn.ZeroEngine.EngineLibraries.ZeroServer.Engine.v3.main.ZeroPerlinNoise;
 import org.bukkit.Chunk;
 import org.bukkit.Location;
 import org.bukkit.Material;
@@ -15,7 +15,7 @@ import java.util.Random;
 public abstract class SBiome {
 
     
-    private PerlinNoise cachedNoise;
+    private ZeroPerlinNoise cachedNoise;
 
     
 
@@ -76,9 +76,9 @@ public abstract class SBiome {
     }
 
     
-    public PerlinNoise createNoise() {
+    public ZeroPerlinNoise createNoise() {
         if (cachedNoise == null) {
-            cachedNoise = new PerlinNoise(noiseSeed(), noiseScale(),
+            cachedNoise = new ZeroPerlinNoise(noiseSeed(), noiseScale(),
                     noiseOctaves(), noisePersistence(), noiseLacunarity());
         }
         return cachedNoise;

@@ -120,8 +120,8 @@ public interface Bedwars {
     void setResourceDrop(Location loc, Material mat, int amount);
 
     interface GameEvent {
-        enum Type { PLAYER_JOIN, PLAYER_LEAVE, COUNTDOWN_START, GAME_START, BED_BROKEN, PLAYER_DEATH, PLAYER_RESPAWN, TEAM_ELIMINATED, GAME_END, GENERATOR_TICK, BLOCK_PLACE, BLOCK_BREAK, SHOP_BUY }
-        Type type();
+        enum ZeroType { PLAYER_JOIN, PLAYER_LEAVE, COUNTDOWN_START, GAME_START, BED_BROKEN, PLAYER_DEATH, PLAYER_RESPAWN, TEAM_ELIMINATED, GAME_END, GENERATOR_TICK, BLOCK_PLACE, BLOCK_BREAK, SHOP_BUY }
+        ZeroType type();
         Game game();
         Player player();
         Object data();

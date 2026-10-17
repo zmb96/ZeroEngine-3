@@ -9,17 +9,17 @@ import org.bukkit.plugin.RegisteredServiceProvider;
 import cn.ZeroEngine.Engine.api.v2.database.Database;
 import cn.ZeroEngine.Engine.api.v2.economy.SFEconomy;
 import cn.ZeroEngine.Engine.api.v2.event.SFEvents;
-import cn.ZeroEngine.Engine.api.v2.feature.chat.ChatManager;
+import cn.ZeroEngine.EngineLibraries.ZeroServer.Engine.v2.feature.chat.ZeroChatManager;
 import cn.ZeroEngine.Engine.api.v2.feature.engine.BlockControl;
 import cn.ZeroEngine.Engine.api.v2.feature.engine.DamageSystem;
 import cn.ZeroEngine.Engine.api.v2.feature.engine.MonsterAttribute;
 import cn.ZeroEngine.Engine.api.v2.feature.engine.ResourcePackManager;
 import cn.ZeroEngine.Engine.api.v2.feature.engine.SpawnControl;
 import cn.ZeroEngine.Engine.api.v2.feature.enchant.SFAttr;
-import cn.ZeroEngine.Engine.api.v2.feature.permission.PermissionManager;
-import cn.ZeroEngine.Engine.api.v2.feature.perf.PerformanceManager;
-import cn.ZeroEngine.Engine.api.v2.feature.tick.TickManager;
-import cn.ZeroEngine.Engine.api.v2.feature.world.WorldManager;
+import cn.ZeroEngine.EngineLibraries.ZeroServer.Engine.v2.feature.permission.ZeroPermissionManager;
+import cn.ZeroEngine.EngineLibraries.ZeroServer.Engine.v2.feature.perf.ZeroPerformanceManager;
+import cn.ZeroEngine.EngineLibraries.ZeroServer.Engine.v2.feature.tick.ZeroTickManager;
+import cn.ZeroEngine.EngineLibraries.ZeroServer.Engine.v2.feature.world.ZeroWorldManager;
 import cn.ZeroEngine.Engine.api.v2.main.SFLogger;
 import cn.ZeroEngine.Engine.api.v2.main.SFPlayerOps;
 import cn.ZeroEngine.Engine.api.v2.main.SFScheduler;
@@ -41,15 +41,15 @@ public interface SFApi {
 
     SFServerOps server();
 
-    TickManager tick();
+    ZeroTickManager tick();
 
-    ChatManager chat();
+    ZeroChatManager chat();
 
-    WorldManager world();
+    ZeroWorldManager world();
 
-    PermissionManager permission();
+    ZeroPermissionManager permission();
 
-    PerformanceManager perf();
+    ZeroPerformanceManager perf();
 
     SFAttr attr();
 

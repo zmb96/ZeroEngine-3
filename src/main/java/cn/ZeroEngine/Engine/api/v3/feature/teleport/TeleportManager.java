@@ -5,7 +5,7 @@ import org.bukkit.Location;
 import org.bukkit.Sound;
 import org.bukkit.entity.Player;
 import org.bukkit.plugin.java.JavaPlugin;
-import cn.ZeroEngine.Engine.api.v3.SF;
+import cn.ZeroEngine.EngineLibraries.ZeroServer.Engine.v3.ZeroSF;
 import cn.ZeroEngine.Engine.api.v3.database.LocationData;
 import cn.ZeroEngine.Engine.api.v3.database.LocationStorage;
 
@@ -25,7 +25,7 @@ public final class TeleportManager {
     }
 
     public boolean teleportNow(Player p, Location dest, String action) {
-        SF sf = SF.sf();
+        ZeroSF sf = ZeroSF.sf();
         if (dest == null || dest.getWorld() == null) {
             sf.msg(p, "§c目标位置无效或世界未加载");
             return false;
@@ -40,7 +40,7 @@ public final class TeleportManager {
     }
 
     public void teleportDelayed(Player p, Location dest, String action, int delayTicks) {
-        SF sf = SF.sf();
+        ZeroSF sf = ZeroSF.sf();
         if (delayTicks <= 0) {
             teleportNow(p, dest, action);
             return;
@@ -122,7 +122,7 @@ public final class TeleportManager {
     }
 
     public boolean back(Player p) {
-        SF sf = SF.sf();
+        ZeroSF sf = ZeroSF.sf();
         LocationData data = LocationStorage.getLastLocation(p.getUniqueId());
         if (data == null) {
             sf.msg(p, "§c没有可返回的位置");

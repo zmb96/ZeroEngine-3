@@ -13,7 +13,7 @@ import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 import org.bukkit.inventory.meta.SkullMeta;
 
-import cn.ZeroEngine.Engine.api.v2.SF;
+import cn.ZeroEngine.EngineLibraries.ZeroServer.Engine.v2.ZeroSF;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -77,7 +77,7 @@ public final class SFText {
     }
 
     public static Component skull(UUID playerId, String name) {
-        SF sf = SF.sf();
+        ZeroSF sf = ZeroSF.sf();
         ItemStack skull = new ItemStack(Material.PLAYER_HEAD);
         SkullMeta meta = (SkullMeta) skull.getItemMeta();
         meta.setOwningPlayer(sf.bukkit().getOfflinePlayer(playerId));
@@ -91,7 +91,7 @@ public final class SFText {
     }
 
     public static Component skullByTexture(String base64Texture, String displayName) {
-        SF sf = SF.sf();
+        ZeroSF sf = ZeroSF.sf();
         ItemStack skull = new ItemStack(Material.PLAYER_HEAD);
         SkullMeta meta = (SkullMeta) skull.getItemMeta();
         if (base64Texture != null && !base64Texture.isEmpty()) {

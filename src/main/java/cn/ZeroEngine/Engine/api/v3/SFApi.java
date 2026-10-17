@@ -9,7 +9,7 @@ import org.bukkit.plugin.RegisteredServiceProvider;
 import cn.ZeroEngine.Engine.api.v3.database.Database;
 import cn.ZeroEngine.Engine.api.v3.economy.SFEconomy;
 import cn.ZeroEngine.Engine.api.v3.event.SFEvents;
-import cn.ZeroEngine.Engine.api.v3.feature.chat.ChatManager;
+import cn.ZeroEngine.EngineLibraries.ZeroServer.Engine.v3.feature.chat.ZeroChatManager;
 import cn.ZeroEngine.Engine.api.v3.feature.engine.BlockControl;
 import cn.ZeroEngine.Engine.api.v3.feature.engine.DamageSystem;
 import cn.ZeroEngine.Engine.api.v3.feature.engine.MonsterAttribute;
@@ -17,15 +17,15 @@ import cn.ZeroEngine.Engine.api.v3.feature.engine.ResourcePackManager;
 import cn.ZeroEngine.Engine.api.v3.feature.engine.SpawnControl;
 import cn.ZeroEngine.Engine.api.v3.feature.gui.GUIManager;
 import cn.ZeroEngine.Engine.api.v3.feature.enchant.SFAttr;
-import cn.ZeroEngine.Engine.api.v3.feature.achievement.AchievementManager;
+import cn.ZeroEngine.EngineLibraries.ZeroServer.Engine.v3.feature.achievement.ZeroAchievementManager;
 import cn.ZeroEngine.Engine.api.v3.feature.gameplay.bedwars.Bedwars;
 import cn.ZeroEngine.Engine.api.v3.feature.gameplay.horde.Horde;
 import cn.ZeroEngine.Engine.api.v3.feature.gameplay.pvp.PvPArena;
 import cn.ZeroEngine.Engine.api.v3.feature.gameplay.village.VillageDefense;
-import cn.ZeroEngine.Engine.api.v3.feature.permission.PermissionManager;
-import cn.ZeroEngine.Engine.api.v3.feature.perf.PerformanceManager;
-import cn.ZeroEngine.Engine.api.v3.feature.tick.TickManager;
-import cn.ZeroEngine.Engine.api.v3.feature.world.WorldManager;
+import cn.ZeroEngine.EngineLibraries.ZeroServer.Engine.v3.feature.permission.ZeroPermissionManager;
+import cn.ZeroEngine.EngineLibraries.ZeroServer.Engine.v3.feature.perf.ZeroPerformanceManager;
+import cn.ZeroEngine.EngineLibraries.ZeroServer.Engine.v3.feature.tick.ZeroTickManager;
+import cn.ZeroEngine.EngineLibraries.ZeroServer.Engine.v3.feature.world.ZeroWorldManager;
 import cn.ZeroEngine.Engine.api.v3.main.SFLogger;
 import cn.ZeroEngine.Engine.api.v3.main.SFPlayerOps;
 import cn.ZeroEngine.Engine.api.v3.main.SFScheduler;
@@ -51,15 +51,15 @@ public interface SFApi {
 
     SFServerOps server();
 
-    TickManager tick();
+    ZeroTickManager tick();
 
-    ChatManager chat();
+    ZeroChatManager chat();
 
-    WorldManager world();
+    ZeroWorldManager world();
 
-    PermissionManager permission();
+    ZeroPermissionManager permission();
 
-    PerformanceManager perf();
+    ZeroPerformanceManager perf();
 
     SFAttr attr();
 
@@ -85,7 +85,7 @@ public interface SFApi {
 
     VillageDefense villageDefense();
 
-    AchievementManager achievements();
+    ZeroAchievementManager achievements();
 
     boolean isPluginListenerChat(Player player);
 

@@ -1,6 +1,6 @@
 package cn.ZeroEngine.Engine.api.v3.feature.achievement;
 
-import cn.ZeroEngine.Engine.api.v3.SF;
+import cn.ZeroEngine.EngineLibraries.ZeroServer.Engine.v3.ZeroSF;
 import org.bukkit.Bukkit;
 import org.bukkit.World;
 
@@ -18,13 +18,13 @@ public final class AchievementGenerator {
 
     public static void generate(Collection<SAchievement> achievements) {
         if (achievements.isEmpty()) {
-            SF.sf().info("[Achievement] No achievements registered, skipping datapack generation");
+            ZeroSF.sf().info("[Achievement] No achievements registered, skipping datapack generation");
             return;
         }
 
         World world = Bukkit.getWorlds().isEmpty() ? null : Bukkit.getWorlds().get(0);
         if (world == null) {
-            SF.sf().warn("[Achievement] No world found, cannot generate datapack");
+            ZeroSF.sf().warn("[Achievement] No world found, cannot generate datapack");
             return;
         }
 
@@ -50,7 +50,7 @@ public final class AchievementGenerator {
             count++;
         }
 
-        SF.sf().info("[Achievement] Generated " + count + " advancement files in " + datapackDir.getAbsolutePath());
+        ZeroSF.sf().info("[Achievement] Generated " + count + " advancement files in " + datapackDir.getAbsolutePath());
     }
 
     private static String buildJson(SAchievement a) {
@@ -114,7 +114,7 @@ public final class AchievementGenerator {
         try (Writer w = new FileWriter(file, StandardCharsets.UTF_8, false)) {
             w.write(content);
         } catch (IOException e) {
-            SF.sf().error("[Achievement] Failed to write " + file.getName(), e);
+            ZeroSF.sf().error("[Achievement] Failed to write " + file.getName(), e);
         }
     }
 }

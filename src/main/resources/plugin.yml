@@ -1,8 +1,8 @@
 name: ZeroEngine
 version: '${version}'
 
-main: cn.ZeroEngine.Engine.api.v1.main
-api-version: '26.2'
+main: cn.ZeroEngine.EngineLibraries.ZeroServer.Engine.v1.Zeromain
+api-version: '1.21.7'
 load: POSTWORLD
 softdepend: [Vault, Essentials, EssentialsX, ViaVersion]
 

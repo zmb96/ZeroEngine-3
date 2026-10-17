@@ -5,6 +5,7 @@ import org.bukkit.block.Block;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.Inventory;
 import cn.ZeroEngine.Engine.api.v3.feature.gui.SChestGUI;
+import cn.ZeroEngine.EngineLibraries.ZeroServer.Engine.v3.feature.recipe.ZeroRecipeManager;
 
 public abstract class AdvancedCraftTable {
 
@@ -18,7 +19,7 @@ public abstract class AdvancedCraftTable {
 
     public SChestGUI onRightChest() { return null; }
 
-    public SChestGUI craftGUI(RecipeManager manager) { return null; }
+    public SChestGUI craftGUI(ZeroRecipeManager manager) { return null; }
 
     public void onOpenChest(Player player, Block workbench, Block dispenser, Inventory dispenserInv) {}
 

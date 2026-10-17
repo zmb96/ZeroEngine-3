@@ -2,6 +2,7 @@ package cn.ZeroEngine.Engine.api.v2.feature.chat;
 
 import net.kyori.adventure.text.Component;
 import org.bukkit.entity.Player;
+import cn.ZeroEngine.EngineLibraries.ZeroServer.Engine.v2.feature.chat.ZeroChatManager;
 
 public interface ChatHandler {
 
@@ -18,7 +19,7 @@ public interface ChatHandler {
         void consume();
         boolean cancelled();
         void cancel();
-        ChatManager.ChatChannel channel();
-        void channel(ChatManager.ChatChannel channel);
+        ZeroChatManager.ChatChannel channel();
+        void channel(ZeroChatManager.ChatChannel channel);
     }
 }

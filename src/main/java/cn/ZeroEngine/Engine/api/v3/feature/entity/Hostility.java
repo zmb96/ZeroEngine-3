@@ -1,6 +1,4 @@
-package cn.ZeroEngine.Engine.api.v3.feature.entity;
-
-public enum Hostility {
+package cn.ZeroEngine.Engine.api.v3.feature.entity;public enum Hostility {
 
     
     HOSTILE,

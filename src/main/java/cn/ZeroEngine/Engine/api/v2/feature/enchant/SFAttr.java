@@ -2,7 +2,7 @@ package cn.ZeroEngine.Engine.api.v2.feature.enchant;
 
 import org.bukkit.attribute.Attribute;
 import org.bukkit.attribute.AttributeModifier;
-import cn.ZeroEngine.Engine.api.v2.SF;
+import cn.ZeroEngine.EngineLibraries.ZeroServer.Engine.v2.ZeroSF;
 
 import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
@@ -121,7 +121,7 @@ public final class SFAttr {
         try {
             Attribute[] values = Attribute.values();
             for (Attribute a : values) REGISTRY.put(a.name(), a);
-            SF sf = SF.sf();
+            ZeroSF sf = ZeroSF.sf();
             if (sf != null) {
                 sf.info("[SFAttr] Loaded " + REGISTRY.size() + " Bukkit attributes");
             }
